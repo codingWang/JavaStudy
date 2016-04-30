@@ -7,11 +7,8 @@ public class JAVA_01 {
 		A classb = new A("he");
 		System.out.println(classa==classb);
 	}
-
 }
 
 class A{
-	
-	public A(String str){
-	}
+	public A(String str){}
 }

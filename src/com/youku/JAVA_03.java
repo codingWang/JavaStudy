@@ -1,43 +1,39 @@
 package com.youku;
+/**
+ * 代码块。静态代码块，构造函数，父类子类的初始化过程
+ * @author 杜伟
+ */
+public class JAVA_03 extends HelloA {
 
-public class JAVA_03 extends HelloA{
-	
-	
-	public JAVA_03(){
-		System.out.println("JAVA_03");
+	public JAVA_03() {
+		System.out.println("JAVA_03构造函数");
 	}
-	
+
 	{
-		System.out.println("I am JAVA_03 class");
-	}
-	
-	static{
-		System.out.println("static JAVA_03");
+		System.out.println("JAVA_03代码块");
 	}
 
-	/**
-	 * @param args
-	 */
+	static {
+		System.out.println("JAVA_03静态代码块");
+	}
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new JAVA_03();
 	}
 
 }
 
-
-
-class HelloA{
-	public HelloA(){
-		System.out.println("HelloA");
-		
+class HelloA {
+	public HelloA() {
+		System.out.println("A构造函数");
 	}
-	
+
 	{
-		System.out.println("I am A class");
+		System.out.println("A的代码块");
 	}
-	 static{
-		 System.out.println("static A");
-	 }
-	
+
+	static {
+		System.out.println("A的静态代码块");
+	}
+
 }

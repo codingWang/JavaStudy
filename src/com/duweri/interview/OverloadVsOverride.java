@@ -1,5 +1,8 @@
 package com.duweri.interview;
-
+/**
+ * ÷ÿ‘ÿ∫Õ÷ÿ–¥
+ * @author ∂≈Œ∞
+ */
 public class OverloadVsOverride {
 	
 	public boolean equals(OverloadVsOverride other){

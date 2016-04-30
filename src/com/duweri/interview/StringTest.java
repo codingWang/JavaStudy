@@ -1,5 +1,8 @@
 package com.duweri.interview;
-
+/**
+ * ×Ö·û´®ÄÚ´æ·ÖÅä
+ * @author ¶ÅÎ°
+ */
 public class StringTest {
 
 	public static void main(String[] args) {
