@@ -52,7 +52,7 @@ public class Sort {
 	 */
 	public static void bubbleSort(int[] arr){
 		for (int i = 0; i <arr.length-1; i++) {//从后往前推小的
-			for (int j = arr.length-1; j>i; j--) {
+			for (int j = arr.length-1; j>i; j--) {//从最后一个开始遍历
 				if (arr[j]>arr[j-1]) {
 					int temp = arr[j];//swap
 					arr[j] = arr[j-1];
@@ -64,9 +64,9 @@ public class Sort {
 	
 	/**
 	 * 快速排序
-	 * 关键:1、选轴值
-	 * 	2、一次划分
-	 * 3、递归快排
+	 * 关键: 1、选轴值
+	 * 		2、一次划分
+	 * 		3、递归快排
 	 */
 	public static void quickSort(int[] arr,int start,int end){
 		if(start<end){
