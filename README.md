@@ -8,6 +8,8 @@
 
 - 设计模式：来源于[这里](http://blog.csdn.net/lovelion/article/details/17517213)
 
+- 面试中可能遇到的数据结构基础知识 
+
 - 阅读以下书籍的小练习：
   + JAVA编程思想
   + Effective Java
