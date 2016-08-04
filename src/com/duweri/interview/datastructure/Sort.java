@@ -6,10 +6,10 @@ public class Sort {
 
 	public static void main(String[] args) {
 		int[] testArr = {12,27,19,39,16,49,61,40,20,94,63,13,27,31,38,43,11,44,81,29,33,88,60,80,51,4,0,1,22,9,8};
-	//	Sort.insertSort(testArr);
+		Sort.insertSort(testArr);
 //		Sort.bubbleSort(testArr);
 //		Sort.quickSort(testArr, 0, testArr.length-1);
-		Sort.selectSort(testArr);
+//		Sort.selectSort(testArr);
 		Sort.display(testArr);
 	}
 	
@@ -29,7 +29,7 @@ public class Sort {
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i];//临时保存待插入序列
 			int j;//下面先保证J大于0再去访问arr[j]!!!!
-			for (j = i-1;j >= 0 && temp > arr[j]    ; j--) {//带插入序列大于当前序列就前移--》从大到小排列
+			for (j = i-1;j >= 0 && temp > arr[j]; j--) {//带插入序列大于当前序列就前移--》从大到小排列
 				arr[j+1] = arr[j];
 			}
 			arr[j+1]=temp;
@@ -48,7 +48,7 @@ public class Sort {
 	/**
 	 * 冒泡排序
 	 * 关键：1、外循环标识无序区和有序区
-	 * 		2、内循环每次将一个无序区的数字排到最前面
+	 * 		2、内循环每次将一个无序区的（最大）数字排到最前面
 	 */
 	public static void bubbleSort(int[] arr){
 		for (int i = 0; i <arr.length-1; i++) {//从后往前推小的
