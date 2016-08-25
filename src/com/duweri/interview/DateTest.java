@@ -18,8 +18,8 @@ public class DateTest {
 		mi=calendar.get(Calendar.MINUTE);
 		s=calendar.get(Calendar.MINUTE);
 		nowsj=y*100+m;
-		System.out.println(y+"Äê"+m+"-"+d+"-"+h+"-"+nowsj);
-		//2016Äê6-21-10-201606
+		System.out.println(y+"-"+m+"-"+d+"-"+h+"-"+nowsj);
+		//2016-6-21-10-201606
 	}
 
 }

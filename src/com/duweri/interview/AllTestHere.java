@@ -1,7 +1,9 @@
 package com.duweri.interview;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class AllTestHere {
@@ -9,7 +11,8 @@ public class AllTestHere {
 	public static void main(String[] args) {
 		// AllTestHere.test1();
 		// AllTestHere.test2();
-		AllTestHere.test3();
+//		AllTestHere.test3();
+		System.out.println(AllTestHere.test4());
 	}
 
 	public static void test1() {
@@ -80,5 +83,11 @@ public class AllTestHere {
 			System.out.print(list.get(i) + ",");
 		}
 		
+	}
+
+	public static String test4(){
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+        return formatter.format(curDate);
 	}
 }

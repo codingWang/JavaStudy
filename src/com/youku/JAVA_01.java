@@ -1,5 +1,7 @@
 package com.youku;
 
+import java.util.HashMap;
+
 public class JAVA_01 {
 	
 	public static void main(String[] args) {

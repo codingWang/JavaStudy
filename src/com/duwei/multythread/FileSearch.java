@@ -20,16 +20,17 @@ public class FileSearch implements Callable<List<File>> {
     }
     
     public static void main(String[] args) throws Exception {
-        File dir = new File("D:\\Usersworkspace\\JavaStudy");//D:\\Usersworkspace\\JavaStudy
+        File dir = new File("D:\\Usersworkspace\\JavaStudy");//指定搜索目录
         FileSearch search = new FileSearch(dir, new FilenameFilter() {
             public boolean accept(File dir, String name) {
-                return name.endsWith(".java");
+                return name.endsWith(".java");//所有以java结尾的文件
             }
         });
         
-        FutureTask<List<File>> task = new FutureTask<List<File>>(search);
-        Thread t = new Thread(task);
-        t.start();
+        FutureTask<List<File>> task = new FutureTask<List<File>>(search);//search实现了Callable接口，封装到任务当中
+        
+        Thread t = new Thread(task);	//任务传入线程
+        t.start();						//开启
         for (File f : task.get()) {
             System.out.println(f.getPath());
         }
@@ -37,7 +38,7 @@ public class FileSearch implements Callable<List<File>> {
     
     @Override
     public List<File> call() throws Exception {//实现Callable接口，有返回值的任务线程
-    	System.out.println("call 开始"+Thread.currentThread().getName());
+    	//System.out.println("call 开始"+Thread.currentThread().getName());
     	
         List<File> list = new ArrayList<File>();//文件
         File[] files = directory.listFiles();
