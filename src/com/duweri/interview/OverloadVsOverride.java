@@ -16,10 +16,10 @@ public class OverloadVsOverride {
 		
 		OverloadVsOverride o3 = new OverloadVsOverride();
 		OverloadVsOverride o4 = new OverloadVsOverride();
-		if (o1.equals(o2)) {
+		if (o1.equals(o2)) {//o1,o2不相等
 			System.out.println("o1 equals o2");
 		}
-		if (o3.equals(o4)) {
+		if (o3.equals(o4)) {//O3，O4相等
 			System.out.println("o3 equals o4");
 		}
 	}
