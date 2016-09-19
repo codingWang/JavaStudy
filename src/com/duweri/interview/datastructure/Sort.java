@@ -104,6 +104,24 @@ public class Sort {
 		return first;
 	}
 	
+	private static int partition2(int[] arr,int left,int right){
+		int pivotKey = arr[left];
+		int pivotePointer = left;
+		
+		while(left < right){
+			while(left<right&&arr[right]>=pivotKey){
+				right--;
+			}
+			while(left<right && arr[left]<=pivotKey){
+				left++;
+			}
+//			swap(arr,left,right);
+		}
+//		swap(arr,pivotePointer,left);
+		return left;
+	}
+	
+	
 	/**
 	 * 选择排序：			O（n^2）
 	 * 每次遍历无序区选出最小的

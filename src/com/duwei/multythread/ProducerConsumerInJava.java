@@ -42,14 +42,16 @@ class Producer extends Thread {
 	     synchronized (queue) { 
 	      while (queue.size() == maxSize) { 
 	       try { 
-	        System.out .println("队列满, " + "Producer thread waiting for " + "consumer to take something from queue"); 
+	        System.out .println("队列满,生产者等待 "); 
 	        queue.wait(); 
 	       } catch (Exception ex) { 
 	        ex.printStackTrace(); } 
 	       } 
 	       Random random = new Random(); 
 	       int i = random.nextInt(); 
-	       System.out.println("Producing value : " + i); queue.add(i); queue.notifyAll(); 
+	       System.out.println("产生值 : " + i);
+	       queue.add(i); 
+	       queue.notifyAll(); 
 	      } 
 	     } 
 	    } 
@@ -71,19 +73,21 @@ class Consumer extends Thread {
    this.queue = queue; 
    this.maxSize = maxSize; 
   } 
+  
   @Override 
   public void run() { 
    while (true) { 
     synchronized (queue) { 
      while (queue.isEmpty()) { 
-      System.out.println("Queue is empty," + "Consumer thread is waiting" + " for producer thread to put something in queue"); 
-      try { 
-       queue.wait(); 
-      } catch (Exception ex) { 
-       ex.printStackTrace(); 
-      } 
+       System.out.println("队列空" + "-消费者等待-" + "生产者放数据"); 
+       try { 
+         queue.wait(); 
+       } catch (Exception ex) { 
+         ex.printStackTrace(); 
+       } 
      } 
-     System.out.println("Consuming value : " + queue.remove()); queue.notifyAll(); 
+     System.out.println("消费 : " + queue.remove()); 
+     queue.notifyAll(); 
     } 
    } 
   } 
