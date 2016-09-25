@@ -10,9 +10,10 @@ public class AllTestHere {
 
 	public static void main(String[] args) {
 		// AllTestHere.test1();
-		// AllTestHere.test2();
+		 AllTestHere.test2();
 //		AllTestHere.test3();
-		System.out.println(AllTestHere.test4());
+//		System.out.println(AllTestHere.test4());
+//		AllTestHere.test5();
 	}
 
 	public static void test1() {
@@ -24,15 +25,19 @@ public class AllTestHere {
 			// return;
 		}
 	}
-
+	/**
+	 * int & Integer的比较
+	 */
 	public static void test2() {
 		int i = 0;
 		Integer integer = new Integer(0);
 
-		System.out.println(i == integer);
-		System.out.println(integer.equals(i));
+		System.out.println(i == integer);//true
+		System.out.println(integer.equals(i));//true
 	}
-
+	/**
+	 * Collection相关方法
+	 */
 	public static void test3() {
 		int array[] = { 112, 111, 23, 456, 231 };
 		// double[] arr = {};
@@ -84,10 +89,23 @@ public class AllTestHere {
 		}
 		
 	}
-
+	/**
+	 * 日期格式化
+	 */
 	public static String test4(){
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
         return formatter.format(curDate);
 	}
+
+	public static void test5(){
+		Boolean flag = false;
+		if (flag = true){//这里是赋值不是==
+		    System.out.println("true");
+		}
+		else{
+		    System.out.println("false");
+		}
+	}
+
 }
