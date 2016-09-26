@@ -10,10 +10,13 @@ public class AllTestHere {
 
 	public static void main(String[] args) {
 		// AllTestHere.test1();
-		 AllTestHere.test2();
+		// AllTestHere.test2();
 //		AllTestHere.test3();
 //		System.out.println(AllTestHere.test4());
 //		AllTestHere.test5();
+//		AllTestHere.test6();
+//		AllTestHere.test7();
+		AllTestHere.test8();
 	}
 
 	public static void test1() {
@@ -108,4 +111,37 @@ public class AllTestHere {
 		}
 	}
 
+	public static void test6(){
+		short a =128;
+		byte b = (byte)a;
+		System.out.println("a="+a+"b="+b);
+	}
+	
+	public static void test7(){
+		Integer var1 = new Integer(1);
+		Integer var2 = var1;
+		
+		doSomething(var2);
+		
+		System.out.println(var1.intValue());
+		System.out.println(var1==var2);
+	}
+
+	private static void doSomething(Integer integer) {
+		integer = new Integer(2);
+	}
+	
+	public static void test8(){
+		try {
+			System.out.println("try");
+			throw new Exception();
+		} catch (Exception e) {
+			System.out.println("catch");
+			return;
+		}finally{
+			System.out.println("finally");
+		}
+	}
+	
+	
 }
