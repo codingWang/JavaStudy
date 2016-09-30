@@ -16,7 +16,8 @@ public class AllTestHere {
 //		AllTestHere.test5();
 //		AllTestHere.test6();
 //		AllTestHere.test7();
-		AllTestHere.test8();
+//		AllTestHere.test8();
+		AllTestHere.test9();
 	}
 
 	public static void test1() {
@@ -143,5 +144,14 @@ public class AllTestHere {
 		}
 	}
 	
+	public static void test9(){
+		String x="fmn";
+		x.toUpperCase();
+		System.out.println(x);
+		String y=x.replace('f','F');
+		System.out.println(y);
+		y=y+"wxy";
+		System.out.println(y);
+	}
 	
 }
