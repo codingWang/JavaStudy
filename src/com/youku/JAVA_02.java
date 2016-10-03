@@ -1,5 +1,9 @@
 package com.youku;
-
+/**
+ * 子类父类的加载顺序问题
+ * @author 杜伟
+ *
+ */
 public class JAVA_02 extends X{
 	Y y = new Y();
 	

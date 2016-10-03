@@ -17,7 +17,8 @@ public class AllTestHere {
 //		AllTestHere.test6();
 //		AllTestHere.test7();
 //		AllTestHere.test8();
-		AllTestHere.test9();
+//		AllTestHere.test9();
+		AllTestHere.test10();
 	}
 
 	public static void test1() {
@@ -153,5 +154,14 @@ public class AllTestHere {
 		y=y+"wxy";
 		System.out.println(y);
 	}
+	/**
+	 * i++ && ++i
+	 */
+	public static void test10(){
+		int i = 0;
+		System.out.println(i++);//0
+		System.out.println(++i);//2
+	}
+	
 	
 }

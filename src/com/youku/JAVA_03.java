@@ -8,11 +8,11 @@ public class JAVA_03 extends HelloA {
 	public JAVA_03() {
 		System.out.println("JAVA_03构造函数");
 	}
-
+	//代码块
 	{
 		System.out.println("JAVA_03代码块");
 	}
-
+	//静态代码快
 	static {
 		System.out.println("JAVA_03静态代码块");
 	}

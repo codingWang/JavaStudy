@@ -1,6 +1,6 @@
 package com.youku;
 /**
- * 静态变量共享
+ * 静态变量所有的实例共享
  * @author 杜伟
  */
 public class JAVA_06 {
