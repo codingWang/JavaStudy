@@ -1,10 +1,12 @@
 package com.duweri.interview.datastructure;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 public class TraversalBinaryTree {
 
-	public void printNode(Node node) {
+	private void printNode(Node node) {
 		System.out.print(node.getData());
 	}
 
@@ -103,6 +105,45 @@ public class TraversalBinaryTree {
 		}
 	}
 
+	/**
+	 * 深度优先遍历二叉树
+	 * @param root 根节点
+	 */
+	public void depthFirstSearch(Node root){
+		Stack<Node> stack = new Stack<Node>();
+		stack.push(root);
+		Node node = root;
+	    while(!stack.empty()){
+	        node = stack.pop();
+	        printNode(node);  //遍历根结点
+	        if(node.getRightNode() != null){
+	        	stack.push(node.getRightNode());  //先将右子树压栈
+	        }
+	        if(node.getLeftNode() != null){
+	        	stack.push(node.getLeftNode());  //再将左子树压栈
+	        }
+	    }
+	}
+	/**
+	 * 广度优先遍历二叉树
+	 * @param node 根节点
+	 */
+	public void breadthFirst(Node node) {
+	    Deque<Node> nodeDeque = new ArrayDeque();
+	    nodeDeque.add(node);
+	    while (!nodeDeque.isEmpty()) {
+	        node = nodeDeque.peekFirst();
+	        printNode(node);
+	        if (node.getLeftNode()!=null) {
+	        	nodeDeque.add(node.getLeftNode());
+			}
+	        if (node.getRightNode()!=null) {
+				nodeDeque.add(node.getRightNode());
+			}
+	    }
+	}
+	
+	
 	public static void main(String[] args) {
 		TraversalBinaryTree tree = new TraversalBinaryTree();
 		Node root = tree.init();
