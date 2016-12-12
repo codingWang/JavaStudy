@@ -2,6 +2,9 @@ package com.duweri.interview;
 /**
  * http://www.importnew.com/18884.html
  * @author ¶ÅÎ°
+ * 
+ * »º´æ-128---127µÄÖµ
+ * 
  */
 public class IntegerCache {
     public static void main(String... strings) {
