@@ -2,6 +2,7 @@ package com.duwei.multythread.interrupt;
 
 import javafx.concurrent.Task;
 
+import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -77,7 +78,7 @@ public class InterruptDemo {
     }
 
     /**
-     * 003:不可抛出的时候要捕获再中断
+     * 003:不可抛出的时候要捕获再中断，不要生吞中断
      */
     public static class TaskRunner implements Runnable {
         private BlockingQueue<Task> queue;
@@ -101,6 +102,49 @@ public class InterruptDemo {
 
         private static class Task {
             public void execute(){}
+        }
+    }
+
+    /**
+     * 004:实现可取消的任务
+     */
+    public static class PrimeProducer extends Thread {
+        private final BlockingQueue<BigInteger> queue;
+
+        PrimeProducer(BlockingQueue<BigInteger> queue) {
+            this.queue = queue;
+        }
+
+        public void run() {
+            try {
+                BigInteger p = BigInteger.ONE;
+                while (!Thread.currentThread().isInterrupted())//改变标志位
+                    queue.put(p = p.nextProbablePrime());
+            } catch (InterruptedException consumed) {
+            /* Allow thread to exit */
+            }
+        }
+
+        public void cancel() { interrupt(); }
+    }
+
+    /**
+     * 005:在返回前恢复中断状态的不可取消任务
+     */
+    public static Task getNextTask(BlockingQueue<Task> queue) {
+        boolean interrupted = false;
+        try {
+            while (true) {
+                try {
+                    return queue.take();
+                } catch (InterruptedException e) {
+                    interrupted = true;
+                    // fall through and retry
+                }
+            }
+        } finally {
+            if (interrupted)
+                Thread.currentThread().interrupt();
         }
     }
 
