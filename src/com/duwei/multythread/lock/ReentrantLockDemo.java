@@ -1,13 +1,13 @@
-package com.duwei.multythread;
+package com.duwei.multythread.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 /**
- * спа╫╦ЖоъЁл╤╪╤тi╫Ьпп++╡ывВё╛н╙ак╠ёж╓оъЁл╟╡х╚ё╛
- * й╧сцак ReentrantLockё╛╢ссц╥╗ио©ирт©╢ЁЖё╛
- * сК synchronizedоЮ╠хё╛ ReentrantLock╬митн╒╦╢тср╩╣Ц║ё
- * рРн╙╠ьпКтзfinallyжп╫Ьпп╫БкЬ╡ывВё╛хГ╧Ш╡╩тз finally╫БкЬё╛
- * сп©идэ╢ЗбКЁЖожрЛЁёкЬц╩╠╩йм╥её╛╤ЬsynchronizedйгсиJVMю╢йм╥екЬ║ё
- * @author ╤ен╟
+ * О©╫О©╫О©╫О©╫О©╫О©╫О©╫ъЁл╤О©╫О©╫О©╫iО©╫О©╫О©╫О©╫++О©╫О©╫О©╫О©╫О©╫О©╫н╙О©╫к╠О©╫ж╓О©╫ъЁл╟О©╫х╚О©╫О©╫
+ * й╧О©╫О©╫О©╫О©╫ ReentrantLockО©╫О©╫О©╫О©╫О©╫ц╥О©╫О©╫о©О©╫О©╫т©О©╫О©╫О©╫О©╫О©╫
+ * О©╫О©╫ synchronizedО©╫О©╫хёО©╫ ReentrantLockО©╫О©╫О©╫О©╫н╒О©╫О©╫О©╫О©╫р╩О©╫Ц║ё
+ * О©╫О©╫н╙О©╫О©╫О©╫О©╫О©╫О©╫finallyО©╫п╫О©╫О©╫п╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ finallyО©╫О©╫О©╫О©╫О©╫О©╫
+ * О©╫п©О©╫О©╫э╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫ЛЁёО©╫О©╫ц╩О©╫О©╫О©╫м╥еёО©╫О©╫О©╫synchronizedО©╫О©╫О©╫О©╫JVMО©╫О©╫О©╫м╥О©╫О©╫О©╫О©╫О©╫
+ * @author О©╫О©╫н╟
  *
  */
 public class ReentrantLockDemo implements Runnable{

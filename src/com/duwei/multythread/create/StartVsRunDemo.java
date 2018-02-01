@@ -1,4 +1,4 @@
-package com.duwei.multythread;
+package com.duwei.multythread.create;
 /**
  * 调用Thread.start&&Thread.run的区别！！！
  * @author 杜伟

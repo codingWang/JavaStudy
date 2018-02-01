@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class CallableDemo {
+public class FutureCallableDemo {
 	public static void main(String[] args) {
 		ExecutorService executorService = Executors.newCachedThreadPool();//线程池
 		
@@ -22,7 +22,7 @@ public class CallableDemo {
 			e.printStackTrace();
 		}
 		
-		System.err.println("主线程在执行");
+		System.out.println("主线程在执行");
 		
 		try {
 			System.out.println("task运行结果"+result.get());
@@ -31,22 +31,22 @@ public class CallableDemo {
 		}
 		System.out.println("所有任务执行完毕");
 	}
-	
 
-}
+	static class Task implements Callable<Integer>{
 
-
-class Task implements Callable<Integer>{
-
-	@Override
-	public Integer call() throws Exception {//有结果返回的，执行耗时计算任务
-		System.out.println("子线程在进行中");
-		Thread.sleep(3000);
-		int sum = 0;
-		for (int i = 0; i < 100; i++) {
-			sum +=i;
+		@Override
+		public Integer call() throws Exception {//有结果返回的，执行耗时计算任务
+			System.out.println("子线程在进行中");
+			Thread.sleep(3000);
+			int sum = 0;
+			for (int i = 0; i < 100; i++) {
+				sum +=i;
+			}
+			return sum;
 		}
-		return sum;
+
 	}
-	
+
 }
+
+
