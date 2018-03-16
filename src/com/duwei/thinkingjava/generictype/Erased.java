@@ -8,7 +8,7 @@ public class Erased {
 	public static void main(String[] args) {
 		Class clazz0 = null;
 		try {
-			clazz0 =Class.forName("com.duwei.thinkingjava.generictype.Erased");//必须使用完整的报名
+			clazz0 =Class.forName("com.duwei.thinkingjava.generictype.Erased");//use full package name
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

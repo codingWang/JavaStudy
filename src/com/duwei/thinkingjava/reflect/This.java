@@ -1,20 +1,23 @@
 package com.duwei.thinkingjava.reflect;
 
+/**
+ * æ­¤demoæ¼”ç¤ºäº†ï¼Œçˆ¶ç±»ä¸å­ç±»ï¼Œé™æ€ä»£ç å—ï¼Œæ„é€ å‡½æ•°mainæ–¹æ³•ç­‰çš„åˆå§‹åŒ–å’Œæ‰§è¡Œé¡ºåº
+ */
 public class This {
-	static Other other;//ÒıÓÃ
+	static Other other;//å¼•ç”¨
 	static{
-		System.out.println("1-->This±»³õÊ¼»¯ÁË");//1
+		System.out.println("1-->Thisè¢«åˆå§‹åŒ–äº†");//1
 	}
 	This(){
-		System.out.println("3-->ThisµÄ¹¹Ôìº¯Êı");//3
+		System.out.println("3-->Thisçš„æ„é€ å‡½æ•°");//3
 	}
 	public static void main(String[] args) {
-		System.out.println("2-->main±»Ö´ĞĞÁË");//2
+		System.out.println("2-->mainè¢«æ‰§è¡Œäº†");//2
 		This ths = new This();
-		//System.out.println(Other.AGE);//²»ĞèÒª³õÊ¼»¯Àà¶øµ÷ÓÃÀàµÄ±äÁ¿-->±àÒëÆÚ³£Á¿
+		//System.out.println(Other.AGE);//ä¸éœ€è¦åˆå§‹åŒ–ç±»è€Œè°ƒç”¨ç±»çš„å˜é‡-->ç¼–è¯‘æœŸå¸¸é‡
 		
-		//Class clazz = Other.class;//²»»á½øĞĞ³õÊ¼»¯
-		//Class clazz = Class.forName("com.duwei.thinkingjava.reflect.Other");//½«½øĞĞ³õÊ¼»¯
-		other = new Other();//ÓÃµ½Ä³¸öÀàµÄÊ±ºò²ÅÈ¥¼ÓÔØÄ³¸öÀà
+		//Class clazz = Other.class;//ä¸ä¼šè¿›è¡Œåˆå§‹åŒ–
+		//Class clazz = Class.forName("com.duwei.thinkingjava.reflect.Other");//å°†è¿›è¡Œåˆå§‹åŒ–
+		other = new Other();//ç”¨åˆ°æŸä¸ªç±»çš„æ—¶å€™æ‰å»åŠ è½½æŸä¸ªç±»
 	}
 }

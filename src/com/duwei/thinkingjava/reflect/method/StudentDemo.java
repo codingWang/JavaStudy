@@ -65,22 +65,22 @@ public class StudentDemo {
     
     public static void main(String[] args) throws  
     IllegalArgumentException, IllegalAccessException, InvocationTargetException {  
-        StudentDemo sd=new StudentDemo();   
+        StudentDemo sd=new StudentDemo();
         sd.setId(1);  
-        sd.setName("²âÊÔinvoke");  
-        sd.setSex("Î´Öª");  
+        sd.setName("myName");
+        sd.setSex("male");
         sd.setAge("10000");  
-        sd.setBrithday("19920205");  
-        sd.setAddress("ºþÄÏ");  
+        sd.setBrithday("19930205");
+        sd.setAddress("china guangzhou");
         Object[] agrs = new Object[]{};  
         StringBuilder sb = new StringBuilder();  
         for (Method m : sd.getClass().getMethods()) {  
             if (m.getName().startsWith("get")) {  
-               // System.out.println(m.getName());  
+                System.out.println(m.getName());
                 sb.append("  <" + m.getName().substring(3) + ">");  
-                sb.append(m.invoke(sd,null)); //Ö´ÐÐÕâ¸ö·½·¨,²ÎÊýÁÐ±í
+                sb.append(m.invoke(sd,null)); //Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
                 sb.append("</"+m.getName().substring(3)+">\r");
-               // System.out.println("---"+m.invoke(sd, args));  
+                System.out.println("---"+m.invoke(sd, args));
             }  
         }  
         System.out.println(sb.toString());  

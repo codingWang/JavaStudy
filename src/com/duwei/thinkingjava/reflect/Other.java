@@ -5,11 +5,11 @@ public class Other extends OtherFather{
 	static final int AGE = 24;
 	
 	static {
-		System.out.println("5-->Other±»³õÊ¼»¯ÁË");
+		System.out.println("5-->Otherè¢«åˆå§‹åŒ–äº†");
 	}
 	
 	Other(){
-		System.out.println("7-->Other¹¹Ôìº¯Êý");
+		System.out.println("7-->Otheræž„é€ å‡½æ•°");
 	}
 
 }
