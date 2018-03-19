@@ -1,7 +1,7 @@
 package com.duweri.interview;
 /**
- * ÖØÔØºÍÖØĞ´
- * @author ¶ÅÎ°
+ * é‡è½½å’Œé‡å†™
+ * @author æœä¼Ÿ
  */
 public class OverloadVsOverride {
 	
@@ -16,10 +16,10 @@ public class OverloadVsOverride {
 		
 		OverloadVsOverride o3 = new OverloadVsOverride();
 		OverloadVsOverride o4 = new OverloadVsOverride();
-		if (o1.equals(o2)) {//o1,o2²»ÏàµÈ
+		if (o1.equals(o2)) {//o1,o2ä¸ç›¸ç­‰
 			System.out.println("o1 equals o2");
 		}
-		if (o3.equals(o4)) {//O3£¬O4ÏàµÈ
+		if (o3.equals(o4)) {//O3ï¼ŒO4ç›¸ç­‰
 			System.out.println("o3 equals o4");
 		}
 	}

@@ -31,7 +31,7 @@ public class AllTestHere {
 		}
 	}
 	/**
-	 * int & IntegerµÄ±È½Ï
+	 * int & Integerçš„æ¯”è¾ƒ
 	 */
 	public static void test2() {
 		int i = 0;
@@ -41,7 +41,7 @@ public class AllTestHere {
 		System.out.println(integer.equals(i));//true
 	}
 	/**
-	 * CollectionÏà¹Ø·½·¨
+	 * Collectionç›¸å…³æ–¹æ³•
 	 */
 	public static void test3() {
 		int array[] = { 112, 111, 23, 456, 231 };
@@ -51,43 +51,43 @@ public class AllTestHere {
 		for (int i = 0; i < array.length; i++) {
 			list.add(new Integer(array[i]));
 		}
-		// -------------ÅÅÐò-----------------------
+		// -------------æŽ’åº-----------------------
 		Collections.sort(list);
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(list.get(i) + ",");
 		}
 		System.out.println();
-		// ---------------»ìÅÅ----------------------
-		System.out.println("-----»ìÅÅ--------");
+		// ---------------æ··æŽ’----------------------
+		System.out.println("-----æ··æŽ’--------");
 		Collections.shuffle(list);
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(list.get(i) + ",");
 		}
 		System.out.println();
-		// -----------------·´×ª--------------------
-		System.out.println("-----·´×ª-------");
+		// -----------------åè½¬--------------------
+		System.out.println("-----åè½¬-------");
 		Collections.reverse(list);
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(list.get(i) + ",");
 		}
 		System.out.println();
-		// -----------------×îÐ¡Öµ--------------------
-		System.out.println("-----------×îÐ¡Öµ---------");
+		// -----------------æœ€å°å€¼--------------------
+		System.out.println("-----------æœ€å°å€¼---------");
 		Collections.min(list);
 		for (int i = 0; i < list.size(); i++) {
 			System.out.print(list.get(i) + ",");
 		}
 		System.out.println();
-		// -----------------×î´ó--------------------
-		System.out.println("-------×î´ó------");
+		// -----------------æœ€å¤§--------------------
+		System.out.println("-------æœ€å¤§------");
 		Collections.max(list);
 		for (int i = 0; i < list.size(); i++) {
 			System.out.print(list.get(i) + ",");
 		}
 		
 		System.out.println();
-		// -----------------Ìæ»»--------------------
-		System.out.println("-------Ìæ»»------");
+		// -----------------æ›¿æ¢--------------------
+		System.out.println("-------æ›¿æ¢------");
 		Collections.fill(list, 111);
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(list.get(i) + ",");
@@ -95,17 +95,17 @@ public class AllTestHere {
 		
 	}
 	/**
-	 * ÈÕÆÚ¸ñÊ½»¯
+	 * æ—¥æœŸæ ¼å¼åŒ–
 	 */
 	public static String test4(){
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date curDate = new Date(System.currentTimeMillis());// »ñÈ¡µ±Ç°Ê±¼ä
+        Date curDate = new Date(System.currentTimeMillis());// èŽ·å–å½“å‰æ—¶é—´
         return formatter.format(curDate);
 	}
 
 	public static void test5(){
 		Boolean flag = false;
-		if (flag = true){//ÕâÀïÊÇ¸³Öµ²»ÊÇ==
+		if (flag = true){//è¿™é‡Œæ˜¯èµ‹å€¼ä¸æ˜¯==
 		    System.out.println("true");
 		}
 		else{

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Pedro Vicente G贸mez S谩nchez.
+ * Copyright (C) 2014 Pedro Vicente G璐竚ez S璋﹏chez.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 package com.github.pedrovgs.problem1;
 
 /**
- * 二进制计数器
+ * 浜岃繘鍒惰鏁板櫒
  * Given a positive integer passed as parameter return 
  * the number of bits that parameter contains
  * equals to one in a binary representation. 

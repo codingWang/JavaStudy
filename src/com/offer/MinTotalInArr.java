@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- * ¸ø¶¨ÕûĞÎÊı×é£¬×éºÏ³ö×îĞ¡Öµ
- * @author ¶ÅÎ°
+ * ç»™å®šæ•´å½¢æ•°ç»„ï¼Œç»„åˆå‡ºæœ€å°å€¼
+ * @author æœä¼Ÿ
  */
 
 public class MinTotalInArr {

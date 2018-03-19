@@ -3,6 +3,9 @@ package com.duwei.thinkingjava.generictype;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * 泛型擦除：只有编译期有效
+ */
 public class Erased {
 
 	public static void main(String[] args) {

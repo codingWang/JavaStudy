@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public class FileOprator {
 	/**
-	 * ¶ÁÈ¡ÎÄ¼şÄÚÈİµ½×Ö½ÚÊı×é²¢·µ»Ø
-	 * @param filePath	ÎÄ¼şÂ·¾¶
-	 * @return	ÎÄ¼şµÄ×Ö½ÚÊı×é
+	 * è¯»å–æ–‡ä»¶å†…å®¹åˆ°å­—èŠ‚æ•°ç»„å¹¶è¿”å›
+	 * @param filePath	æ–‡ä»¶è·¯å¾„
+	 * @return	æ–‡ä»¶çš„å­—èŠ‚æ•°ç»„
 	 * @throws IOException 
 	 */
 	public static byte[] getByteFromFile(String filePath) throws IOException{
@@ -24,12 +24,12 @@ public class FileOprator {
 		FileInputStream in = new FileInputStream(file);
 		
 		int offset = 0;  
-        int numRead = 0;  								//·Ö¶Î¶ÁÈë»º³å×Ö½ÚÊı×é
+        int numRead = 0;  								//åˆ†æ®µè¯»å…¥ç¼“å†²å­—èŠ‚æ•°ç»„
         while (offset < b.length && (numRead = in.read(b, offset, b.length - offset)) >= 0) {  
             offset += numRead;  
         } 
 		
-     // È·±£ËùÓĞÊı¾İ¾ù±»¶ÁÈ¡  
+     // ç¡®ä¿æ‰€æœ‰æ•°æ®å‡è¢«è¯»å–  
         if (offset != b.length) {  
         	throw new IOException("Could not completely read file " + file.getName());  
         }  

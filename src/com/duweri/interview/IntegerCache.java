@@ -1,9 +1,9 @@
 package com.duweri.interview;
 /**
  * http://www.importnew.com/18884.html
- * @author ¶ÅÎ°
+ * @author æœä¼Ÿ
  * 
- * »º´æ-128---127µÄÖµ
+ * ç¼“å­˜-128---127çš„å€¼
  * 
  */
 public class IntegerCache {
