@@ -1,7 +1,5 @@
 package com.duweri.interview.datastructure;
 
-import javax.management.Descriptor;
-
 public class Sort {
 
 	public static void main(String[] args) {
@@ -20,39 +18,39 @@ public class Sort {
 	}
 	
 	/**
-	 * ²åÈëÅÅĞò
-	 * ¹Ø¼ü£º1¡¢ÁÙÊ±±äÁ¿±£´æ´ıÅÅĞòµÄÊı×Ö
-	 * 		2¡¢±ß±È½Ï±ßºóÒÆ
-	 * ÊÊÓÃÇé¿ö£ºĞòÁĞ»ù±¾ÓĞĞòµÄÊ±ºò
+	 * æ’å…¥æ’åº
+	 * å…³é”®ï¼š1ã€ä¸´æ—¶å˜é‡ä¿å­˜å¾…æ’åºçš„æ•°å­—
+	 * 		2ã€è¾¹æ¯”è¾ƒè¾¹åç§»
+	 * é€‚ç”¨æƒ…å†µï¼šåºåˆ—åŸºæœ¬æœ‰åºçš„æ—¶å€™
 	 */
 	public static void insertSort(int[] arr){
 		for (int i = 1; i < arr.length; i++) {
-			int temp = arr[i];//ÁÙÊ±±£´æ´ı²åÈëĞòÁĞ
-			int j;//ÏÂÃæÏÈ±£Ö¤J´óÓÚ0ÔÙÈ¥·ÃÎÊarr[j]!!!!
-			for (j = i-1;j >= 0 && temp > arr[j]; j--) {//´ø²åÈëĞòÁĞ´óÓÚµ±Ç°ĞòÁĞ¾ÍÇ°ÒÆ--¡·´Ó´óµ½Ğ¡ÅÅÁĞ
+			int temp = arr[i];//ä¸´æ—¶ä¿å­˜å¾…æ’å…¥åºåˆ—
+			int j;//ä¸‹é¢å…ˆä¿è¯Jå¤§äº0å†å»è®¿é—®arr[j]!!!!
+			for (j = i-1;j >= 0 && temp > arr[j]; j--) {//å¸¦æ’å…¥åºåˆ—å¤§äºå½“å‰åºåˆ—å°±å‰ç§»--ã€‹ä»å¤§åˆ°å°æ’åˆ—
 				arr[j+1] = arr[j];
 			}
 			arr[j+1]=temp;
 		}
 	}
 	/**
-	 * Ï£¶ûÅÅĞò
+	 * å¸Œå°”æ’åº
 	 */
 	public static void shellSort(int[] arr){
 		
-		for (int i = arr.length/2; i >= 1; i=i/2) {//×ÓĞòÁĞµÄ»®·Ö
+		for (int i = arr.length/2; i >= 1; i=i/2) {//å­åºåˆ—çš„åˆ’åˆ†
 			
 		}
 		
 	}
 	/**
-	 * Ã°ÅİÅÅĞò
-	 * ¹Ø¼ü£º1¡¢ÍâÑ­»·±êÊ¶ÎŞĞòÇøºÍÓĞĞòÇø
-	 * 		2¡¢ÄÚÑ­»·Ã¿´Î½«Ò»¸öÎŞĞòÇøµÄ£¨×î´ó£©Êı×ÖÅÅµ½×îÇ°Ãæ
+	 * å†’æ³¡æ’åº
+	 * å…³é”®ï¼š1ã€å¤–å¾ªç¯æ ‡è¯†æ— åºåŒºå’Œæœ‰åºåŒº
+	 * 		2ã€å†…å¾ªç¯æ¯æ¬¡å°†ä¸€ä¸ªæ— åºåŒºçš„ï¼ˆæœ€å¤§ï¼‰æ•°å­—æ’åˆ°æœ€å‰é¢
 	 */
 	public static void bubbleSort(int[] arr){
-		for (int i = 0; i <arr.length-1; i++) {//´ÓºóÍùÇ°ÍÆĞ¡µÄ
-			for (int j = arr.length-1; j>i; j--) {//´Ó×îºóÒ»¸ö¿ªÊ¼±éÀú
+		for (int i = 0; i <arr.length-1; i++) {//ä»åå¾€å‰æ¨å°çš„
+			for (int j = arr.length-1; j>i; j--) {//ä»æœ€åä¸€ä¸ªå¼€å§‹éå†
 				if (arr[j]>arr[j-1]) {
 					int temp = arr[j];//swap
 					arr[j] = arr[j-1];
@@ -63,10 +61,10 @@ public class Sort {
 	}
 	
 	/**
-	 * ¿ìËÙÅÅĞò
-	 * ¹Ø¼ü: 1¡¢Ñ¡ÖáÖµ
-	 * 		2¡¢Ò»´Î»®·Ö
-	 * 		3¡¢µİ¹é¿ìÅÅ
+	 * å¿«é€Ÿæ’åº
+	 * å…³é”®: 1ã€é€‰è½´å€¼
+	 * 		2ã€ä¸€æ¬¡åˆ’åˆ†
+	 * 		3ã€é€’å½’å¿«æ’
 	 */
 	public static void quickSort(int[] arr,int start,int end){
 		if(start<end){
@@ -76,11 +74,11 @@ public class Sort {
 		}
 	}
 	/**
-	 * ÒÔarr[0]Îª»ù×¼½øĞĞÒ»´Î»®·ÖËã·¨£¬×ó±ß¶¼Ğ¡ÓÚarr[0]£¬ÓÒ±ß¶¼´óÓÚarr[0]
+	 * ä»¥arr[0]ä¸ºåŸºå‡†è¿›è¡Œä¸€æ¬¡åˆ’åˆ†ç®—æ³•ï¼Œå·¦è¾¹éƒ½å°äºarr[0]ï¼Œå³è¾¹éƒ½å¤§äºarr[0]
 	 */
 	private static int partition(int[] arr,int first,int end){
 		while(first < end){
-			//ÏÈÉ¨ÃèÓÒ¶Ë
+			//å…ˆæ‰«æå³ç«¯
 			while(first < end && arr[first]<arr[end]){
 				end--;
 			}
@@ -90,7 +88,7 @@ public class Sort {
 				arr[first] = temp;
 				first++;
 			}
-			//É¨Ãè×ó±ß
+			//æ‰«æå·¦è¾¹
 			while(first < end && arr[first]<arr[end]){
 				first++;
 			}
@@ -123,19 +121,19 @@ public class Sort {
 	
 	
 	/**
-	 * Ñ¡ÔñÅÅĞò£º			O£¨n^2£©
-	 * Ã¿´Î±éÀúÎŞĞòÇøÑ¡³ö×îĞ¡µÄ
+	 * é€‰æ‹©æ’åºï¼š			Oï¼ˆn^2ï¼‰
+	 * æ¯æ¬¡éå†æ— åºåŒºé€‰å‡ºæœ€å°çš„
 	 */
 	public static void selectSort(int[] arr){
 		int minIndex = 0;
 		for (int i = 0; i < arr.length-1; i++) {
-			minIndex = i;//Ö¸Ïò×îĞ¡µÄÖµµÄ½Ç±ê
-			for (int j = i+1; j < arr.length; j++) {//±éÀúÎŞĞòÇø
+			minIndex = i;//æŒ‡å‘æœ€å°çš„å€¼çš„è§’æ ‡
+			for (int j = i+1; j < arr.length; j++) {//éå†æ— åºåŒº
 				if(arr[j] < arr[minIndex]){
 					minIndex = j;
 				}
 			}
-			if (minIndex != i) {		//ÎŞĞòÇø±éÀúÍêÁË£¬ÕÒµ½×îĞ¡µÄ½Ç±êÁË£¬½»»»
+			if (minIndex != i) {		//æ— åºåŒºéå†å®Œäº†ï¼Œæ‰¾åˆ°æœ€å°çš„è§’æ ‡äº†ï¼Œäº¤æ¢
 				int temp = arr[minIndex];
 				arr[minIndex] = arr[i];
 				arr[i] = temp;

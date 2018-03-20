@@ -11,33 +11,33 @@ public class TraversalBinaryTree {
 	}
 
 	/**
-	 * ÏÈĞò±éÀú---µİ¹é
+	 * å…ˆåºéå†---é€’å½’
 	 */
 	public void theFirstTraversal(Node root) {
-		printNode(root); // ¸ù
-		if (root.getLeftNode() != null) { // ×ó
+		printNode(root); // æ ¹
+		if (root.getLeftNode() != null) { // å·¦
 			theFirstTraversal(root.getLeftNode());
 		}
-		if (root.getRightNode() != null) { // ÓÒ
+		if (root.getRightNode() != null) { // å³
 			theFirstTraversal(root.getRightNode());
 		}
 	}
 
 	/**
-	 * ÖĞĞò±éÀú---µİ¹é
+	 * ä¸­åºéå†---é€’å½’
 	 */
 	public void theInOrderTraversal(Node root) {
-		if (root.getLeftNode() != null) { // ×ó
+		if (root.getLeftNode() != null) { // å·¦
 			theInOrderTraversal(root.getLeftNode());
 		}
-		printNode(root); // ÖĞ
+		printNode(root); // ä¸­
 		if (root.getRightNode() != null) {
-			theInOrderTraversal(root.getRightNode());// ÓÒ
+			theInOrderTraversal(root.getRightNode());// å³
 		}
 	}
 
 	/**
-	 * ºóĞò±éÀú---µİ¹é
+	 * ååºéå†---é€’å½’
 	 */
 	public void thePostOrderTraversal(Node root) {
 		if (root.getLeftNode() != null) {
@@ -49,33 +49,33 @@ public class TraversalBinaryTree {
 		printNode(root);
 	}
 	/**
-	 * Ç°Ğò±éÀú---·Çµİ¹éËã·¨
+	 * å‰åºéå†---éé€’å½’ç®—æ³•
 	 */
 	public void theFirstTraversal_Stack(Node root) {
-		Stack<Node> stack = new Stack<Node>();//³õÊ¼»¯Õ»
-		Node node = root;					//±éÀú¹ı³ÌÖĞÒÆ¶¯´Ë½Úµã
-		while (node != null || stack.size() > 0) { // ½«ËùÓĞ×óº¢×ÓÑ¹Õ»
-			if (node != null) { //½Úµã²»Îª¿Õ£¬
-				printNode(node);// Êä³ö¸Ã½Úµã
-				stack.push(node);//½ÚµãÈëÕ»
-				node = node.getLeftNode();//Ö¸Ïò×óº¢×Ó
-			} else {		//½ÚµãÎª¿Õ
-				node = stack.pop();//³öÕ»·µ»Ø£¬È¥±éÀúÓÒº¢×Ó
+		Stack<Node> stack = new Stack<Node>();//åˆå§‹åŒ–æ ˆ
+		Node node = root;					//éå†è¿‡ç¨‹ä¸­ç§»åŠ¨æ­¤èŠ‚ç‚¹
+		while (node != null || stack.size() > 0) { // å°†æ‰€æœ‰å·¦å­©å­å‹æ ˆ
+			if (node != null) { //èŠ‚ç‚¹ä¸ä¸ºç©ºï¼Œ
+				printNode(node);// è¾“å‡ºè¯¥èŠ‚ç‚¹
+				stack.push(node);//èŠ‚ç‚¹å…¥æ ˆ
+				node = node.getLeftNode();//æŒ‡å‘å·¦å­©å­
+			} else {		//èŠ‚ç‚¹ä¸ºç©º
+				node = stack.pop();//å‡ºæ ˆè¿”å›ï¼Œå»éå†å³å­©å­
 				node = node.getRightNode();
 			}
 		}
 	}
 	/**
-	 * ÖĞĞò±éÀú---·Çµİ¹éËã·¨
+	 * ä¸­åºéå†---éé€’å½’ç®—æ³•
 	 */
 	public void theInOrderTraversal_Stack(Node root) { 
-		Stack<Node> stack = new Stack<Node>();//³õÊ¼»¯Õ»
-		Node node = root;						//ÁÙÊ±Ö¸Õë½Úµã
-		while (node != null || stack.size() > 0) {//Õ»²»¿Õ»òÕß½Úµã²»¿Õ
-			if (node != null) {					//½Úµã²»¿ÕµÄÇé¿ö
+		Stack<Node> stack = new Stack<Node>();//åˆå§‹åŒ–æ ˆ
+		Node node = root;						//ä¸´æ—¶æŒ‡é’ˆèŠ‚ç‚¹
+		while (node != null || stack.size() > 0) {//æ ˆä¸ç©ºæˆ–è€…èŠ‚ç‚¹ä¸ç©º
+			if (node != null) {					//èŠ‚ç‚¹ä¸ç©ºçš„æƒ…å†µ
 				stack.push(node); 
 				node = node.getLeftNode();
-			} else {						//Õ»²»¿ÕµÄÇé¿ö
+			} else {						//æ ˆä¸ç©ºçš„æƒ…å†µ
 				node = stack.pop(); 
 				printNode(node);
 				node = node.getRightNode();
@@ -83,11 +83,11 @@ public class TraversalBinaryTree {
 		}
 	}
 	/**
-	 * ºóĞò±éÀú---·Çµİ¹éËã·¨
+	 * ååºéå†---éé€’å½’ç®—æ³•
 	 */
 	public void thePostOrderTraversal_Stack(Node root) { 
 		Stack<Node> stack = new Stack<Node>();
-		Stack<Node> output = new Stack<Node>();// ¹¹ÔìÒ»¸öÖĞ¼äÕ»À´´æ´¢ÄæºóĞò±éÀúµÄ½á¹û
+		Stack<Node> output = new Stack<Node>();// æ„é€ ä¸€ä¸ªä¸­é—´æ ˆæ¥å­˜å‚¨é€†ååºéå†çš„ç»“æœ
 		Node node = root;
 		while (node != null || stack.size() > 0) {
 			if (node != null) {
@@ -106,8 +106,8 @@ public class TraversalBinaryTree {
 	}
 
 	/**
-	 * Éî¶ÈÓÅÏÈ±éÀú¶ş²æÊ÷
-	 * @param root ¸ù½Úµã
+	 * æ·±åº¦ä¼˜å…ˆéå†äºŒå‰æ ‘
+	 * @param root æ ¹èŠ‚ç‚¹
 	 */
 	public void depthFirstSearch(Node root){
 		Stack<Node> stack = new Stack<Node>();
@@ -115,18 +115,18 @@ public class TraversalBinaryTree {
 		Node node = root;
 	    while(!stack.empty()){
 	        node = stack.pop();
-	        printNode(node);  //±éÀú¸ù½áµã
+	        printNode(node);  //éå†æ ¹ç»“ç‚¹
 	        if(node.getRightNode() != null){
-	        	stack.push(node.getRightNode());  //ÏÈ½«ÓÒ×ÓÊ÷Ñ¹Õ»
+	        	stack.push(node.getRightNode());  //å…ˆå°†å³å­æ ‘å‹æ ˆ
 	        }
 	        if(node.getLeftNode() != null){
-	        	stack.push(node.getLeftNode());  //ÔÙ½«×ó×ÓÊ÷Ñ¹Õ»
+	        	stack.push(node.getLeftNode());  //å†å°†å·¦å­æ ‘å‹æ ˆ
 	        }
 	    }
 	}
 	/**
-	 * ¹ã¶ÈÓÅÏÈ±éÀú¶ş²æÊ÷
-	 * @param node ¸ù½Úµã
+	 * å¹¿åº¦ä¼˜å…ˆéå†äºŒå‰æ ‘
+	 * @param node æ ¹èŠ‚ç‚¹
 	 */
 	public void breadthFirst(Node node) {
 	    Deque<Node> nodeDeque = new ArrayDeque();
@@ -147,18 +147,18 @@ public class TraversalBinaryTree {
 	public static void main(String[] args) {
 		TraversalBinaryTree tree = new TraversalBinaryTree();
 		Node root = tree.init();
-		System.out.println("ÏÈĞò±éÀú");
+		System.out.println("å…ˆåºéå†");
 		tree.theFirstTraversal(root);
 		System.out.println("");
-		System.out.println("ÖĞĞò±éÀú");
+		System.out.println("ä¸­åºéå†");
 		tree.theInOrderTraversal(root);
 		System.out.println("");
-		System.out.println("ºóĞò±éÀú");
+		System.out.println("ååºéå†");
 		tree.thePostOrderTraversal(root);
 		System.out.println("");
 	}
 
-	public Node init() {// ×¢Òâ±ØĞëÄæĞò½¨Á¢£¬ÏÈ½¨Á¢×Ó½Úµã£¬ÔÙÄæĞòÍùÉÏ½¨Á¢£¬ÒòÎª·ÇÒ¶×Ó½áµã»áÊ¹ÓÃµ½ÏÂÃæµÄ½Úµã£¬¶ø³õÊ¼»¯ÊÇ°´Ë³Ğò³õÊ¼»¯µÄ£¬²»ÄæĞò½¨Á¢»á±¨´í
+	public Node init() {// æ³¨æ„å¿…é¡»é€†åºå»ºç«‹ï¼Œå…ˆå»ºç«‹å­èŠ‚ç‚¹ï¼Œå†é€†åºå¾€ä¸Šå»ºç«‹ï¼Œå› ä¸ºéå¶å­ç»“ç‚¹ä¼šä½¿ç”¨åˆ°ä¸‹é¢çš„èŠ‚ç‚¹ï¼Œè€Œåˆå§‹åŒ–æ˜¯æŒ‰é¡ºåºåˆå§‹åŒ–çš„ï¼Œä¸é€†åºå»ºç«‹ä¼šæŠ¥é”™
 		Node J = new Node(8, null, null);
 		Node H = new Node(4, null, null);
 		Node G = new Node(2, null, null);
@@ -168,7 +168,7 @@ public class TraversalBinaryTree {
 		Node C = new Node(9, F, null);
 		Node B = new Node(3, D, E);
 		Node A = new Node(6, B, C);
-		return A; // ·µ»Ø¸ù½Úµã
+		return A; // è¿”å›æ ¹èŠ‚ç‚¹
 	}
 
 	public class Node {

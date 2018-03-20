@@ -2,8 +2,8 @@ package com.duweri.interview.datastructure;
 
 
 /**
- * ÒÑÖªÇ°Ğò±éÀúºÍºóĞø±éÀúÖØ½¨¶ş²æÊ÷
- * @author ¶ÅÎ°
+ * å·²çŸ¥å‰åºéå†å’Œåç»­éå†é‡å»ºäºŒå‰æ ‘
+ * @author æœä¼Ÿ
  */
 public class ReBuildBinaryTree {
 	
@@ -18,23 +18,23 @@ public class ReBuildBinaryTree {
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
-    //Ç°Ğò±éÀú{1,2,4,7,3,5,6,8}ºÍÖĞĞò±éÀúĞòÁĞ{4,7,2,1,5,3,8,6}
+    //å‰åºéå†{1,2,4,7,3,5,6,8}å’Œä¸­åºéå†åºåˆ—{4,7,2,1,5,3,8,6}
     private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
          
         if(startPre>endPre||startIn>endIn)
             return null;
-        TreeNode root=new TreeNode(pre[startPre]);//Ç°Ğò±éÀúµÄµÚÒ»¸ö½áµã
+        TreeNode root=new TreeNode(pre[startPre]);//å‰åºéå†çš„ç¬¬ä¸€ä¸ªç»“ç‚¹
          
-        for(int i=startIn;i<=endIn;i++){//±éÀúÖĞĞòÊı×é
-            if(in[i]==pre[startPre]){			//Èç¹ûÖĞĞòµÄÄ³½ÚµãºÍÇ°ĞòÒ»Ñù
-            	//µİ¹é×ó±ß
+        for(int i=startIn;i<=endIn;i++){//éå†ä¸­åºæ•°ç»„
+            if(in[i]==pre[startPre]){			//å¦‚æœä¸­åºçš„æŸèŠ‚ç‚¹å’Œå‰åºä¸€æ ·
+            	//é€’å½’å·¦è¾¹
                 root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1);
-                //µİ¹éÓÒ±ß
+                //é€’å½’å³è¾¹
                 root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn);
             }
-        }//Ñ­»·ÍêÊı×é½áÊø
+        }//å¾ªç¯å®Œæ•°ç»„ç»“æŸ
         
-        return root;//·µ»Ø¸ù½Úµã
+        return root;//è¿”å›æ ¹èŠ‚ç‚¹
     }
 	
 
