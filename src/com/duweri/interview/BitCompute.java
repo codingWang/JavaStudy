@@ -1,37 +1,50 @@
 package com.duweri.interview;
+
 /**
- * Î»ÔËËãDemo
- * @author ¶ÅÎ°
- * 
+ * ä½è¿ç®—Demo
+ *
+ * @author æœä¼Ÿ
  */
 public class BitCompute {
 
-	public static void main(String[] args) {
-		//Òì»ò
-		int a = 8;//1000
-		int b = 9;//1001
-		System.out.println("a^b = "+(a^b));
-		
-		int x = 15;//01111=1+2+4+8
-		int y = 23;//10111=1+2+4+16
-		System.out.println("x^y = "+(x^y));
-		
-		//ÓëÔËËã
-		System.out.println("x&y = "+(x&y));
-		
-		//»òÔËËã
-		System.out.println("x|y = "+ (x|y));
-		
-		//×óÓÒÒÆÔËËã
-		System.out.println("8>>2 = "+(8>>2));
-		System.out.println("8<<2 = "+(8<<2));
-		
-		//~		Ô­Âë01000·Å½ø¼ÆËã»úÓÃ²¹Âë£º01000£¬
-		//È¡·´¼ÆËã£º10111£¨ÕâÊÇ²¹Âë£©£¬Êä³öÔ´Âë£¨È¡·´¼Ó1£¬·ûºÅÎ»²»±ä£©£º11001
-		System.out.println("~ = "+(~8));
-		
-		System.out.println("8>>>2="+(8>>>2));
-		
-	}
+    public static void main(String[] args) {
+        //å¼‚æˆ–
+        int a = 8;//1000
+        int b = 9;//1001
+        ////////////0001
+        System.out.println("a^b = " + (a ^ b));
+
+        int x = 15;//01111=1+2+4+8
+        int y = 23;//10111=1+2+4+16
+        /////////////11000=16+8=24
+        System.out.println("x^y = " + (x ^ y));
+
+        //ä¸Žè¿ç®—
+        //int x = 15;//01111=1+2+4+8
+        //int y = 23;//10111=1+2+4+16
+        ///////////////00111=4+2+1=7
+        System.out.println("x&y = " + (x & y));
+
+        //æˆ–è¿ç®—
+        //int x = 15;//01111=1+2+4+8
+        //int y = 23;//10111=1+2+4+16
+        ///////////////11111=16+8+4+2+1=31
+        System.out.println("x|y = " + (x | y));
+
+        //å·¦å³ç§»è¿ç®—
+        //0000 1000>>0000 0010
+        //0000 1000<<0010 0000
+        System.out.println("8>>2 = " + (8 >> 2));//2
+        System.out.println("8<<2 = " + (8 << 2));//32
+        System.out.println("8<<2 = " + (8 << 5));//256
+        System.out.println("1<<32 = " + (1 << 32));//1
+
+        //~		åŽŸç 01000æ”¾è¿›è®¡ç®—æœºç”¨è¡¥ç ï¼š01000ï¼Œ
+        //å–åè®¡ç®—ï¼š10111ï¼ˆè¿™æ˜¯è¡¥ç ï¼‰ï¼Œè¾“å‡ºæºç ï¼ˆå–ååŠ 1ï¼Œç¬¦å·ä½ä¸å˜ï¼‰ï¼š11001
+        System.out.println("~ = " + (~8));
+
+        System.out.println("8>>>2=" + (8 >>> 2));
+
+    }
 
 }
