@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 
 public class Banker{
-	int available[] = new int[]{3,3,2};//¿ÉµÃµ½µÄ×ÊÔ´
-	int max[][] = new int[][]{{7,5,3},{3,2,2},{9,0,2},{2,2,2},{4,3,3}};//Ã¿¸ö½ø³Ì×î´ó×ÊÔ´Êı
-	int allocation[][] = new int[][]{{0,1,0},{2,0,0},{3,0,2},{2,1,1},{0,0,2}};//Ã¿¸ö½ø³ÌÄ¿Ç°ÓµÓĞµÄ×ÊÔ´Êı
-	int need[][] = new int[][]{{7,4,3},{1,2,2},{6,0,0},{0,1,1},{4,3,1}};//Ã¿¸ö½ø³ÌĞèÒªµÄ×ÊÔ´Êı
+	int available[] = new int[]{3,3,2};//å¯å¾—åˆ°çš„èµ„æº
+	int max[][] = new int[][]{{7,5,3},{3,2,2},{9,0,2},{2,2,2},{4,3,3}};//æ¯ä¸ªè¿›ç¨‹æœ€å¤§èµ„æºæ•°
+	int allocation[][] = new int[][]{{0,1,0},{2,0,0},{3,0,2},{2,1,1},{0,0,2}};//æ¯ä¸ªè¿›ç¨‹ç›®å‰æ‹¥æœ‰çš„èµ„æºæ•°
+	int need[][] = new int[][]{{7,4,3},{1,2,2},{6,0,0},{0,1,1},{4,3,1}};//æ¯ä¸ªè¿›ç¨‹éœ€è¦çš„èµ„æºæ•°
 	
-	void showData()//Õ¹Ê¾Êı¾İÊä³öÃ¿¸ö½ø³ÌµÄÏà¹ØÊı¾İ
+	void showData()//å±•ç¤ºæ•°æ®è¾“å‡ºæ¯ä¸ªè¿›ç¨‹çš„ç›¸å…³æ•°æ®
 	{
-		System.out.println("½ø³ÌºÅ      Max   Allocation Need   ");
+		System.out.println("è¿›ç¨‹å·      Max   Allocation Need   ");
 		System.out.println("     A  B  C  A  B  C  A  B  C");
 		for(int i = 0;i<5;i++)
 		{
@@ -23,19 +23,19 @@ public class Banker{
 		}
 	}
 
-	boolean change(int inRequestNum,int inRequest[]){//·ÖÅäÊı¾İ
+	boolean change(int inRequestNum,int inRequest[]){//åˆ†é…æ•°æ®
 		int requestNum = inRequestNum;
 		int request[] = inRequest;
-		// for(int i=0;i<3;i++)System.out.println("ĞŞ¸ÄÇ°available"+available[i]);
+		// for(int i=0;i<3;i++)System.out.println("ä¿®æ”¹å‰available"+available[i]);
 		if(!(request[0]<=need[requestNum][0]&&request[1]<=need[requestNum][1]&&request[2]<=need[requestNum][2])){
-			System.out.println("ÇëÇóµÄ×ÊÔ´Êı³¬¹ıÁËËùĞèÒªµÄ×î´óÖµ£¬·ÖÅä´íÎó");
+			System.out.println("è¯·æ±‚çš„èµ„æºæ•°è¶…è¿‡äº†æ‰€éœ€è¦çš„æœ€å¤§å€¼ï¼Œåˆ†é…é”™è¯¯");
 			return false;
 		}
 		if((request[0]<=available[0]&&request[1]<=available[1]&&request[2]<=available[2])==false){
-			System.out.println("ÉĞÎŞ×ã¹»×ÊÔ´·ÖÅä£¬±ØĞëµÈ´ı");
+			System.out.println("å°šæ— è¶³å¤Ÿèµ„æºåˆ†é…ï¼Œå¿…é¡»ç­‰å¾…");
 			return false;
 		}
-		for(int i = 0;i<3;i++){//ÊÔ·ÖÅäÊı¾İ¸øÇëÇóµÄÏß³Ì
+		for(int i = 0;i<3;i++){//è¯•åˆ†é…æ•°æ®ç»™è¯·æ±‚çš„çº¿ç¨‹
 	
 			available[i] = available[i]-request[i];
 			
@@ -44,13 +44,13 @@ public class Banker{
 			need[requestNum][i] = need[requestNum][i] - request[i];
 	
 		}
-		boolean flag = checkSafe(available[0],available[1],available[2]);//½øĞĞ°²È«ĞÔ¼ì²é²¢·µ»ØÊÇ·ñ°²È«
+		boolean flag = checkSafe(available[0],available[1],available[2]);//è¿›è¡Œå®‰å…¨æ€§æ£€æŸ¥å¹¶è¿”å›æ˜¯å¦å®‰å…¨
 		
 		if(flag==true){
-			System.out.println("ÄÜ¹»°²È«·ÖÅä");
+			System.out.println("èƒ½å¤Ÿå®‰å…¨åˆ†é…");
 			return true;
 		}else{	
-			System.out.println("²»ÄÜ¹»°²È«·ÖÅä");		
+			System.out.println("ä¸èƒ½å¤Ÿå®‰å…¨åˆ†é…");		
 			for(int i = 0;i<3;i++){		
 				available[i] = available[i]+request[i];			
 				allocation[requestNum][i] = allocation[requestNum][i] - request[i];
@@ -68,15 +68,15 @@ public class Banker{
 		work[2] = c;
 		int i=0;
 		boolean finish[] =  new boolean[5];
-		while(i<5)//Ñ°ÕÒÒ»¸öÄÜ¹»Âú×ãµÄÈÏÎªÍê³Éºó²ÅÈ¥Ö´ĞĞÏÂÒ»½ø³Ì
+		while(i<5)//å¯»æ‰¾ä¸€ä¸ªèƒ½å¤Ÿæ»¡è¶³çš„è®¤ä¸ºå®Œæˆåæ‰å»æ‰§è¡Œä¸‹ä¸€è¿›ç¨‹
 		{
-			if(finish[i]==false&&need[i][0]<=work[0]&&need[i][1]<=work[1]&&need[i][2]<=work[2]){//ÕÒµ½Âú×ãµÄĞŞ¸ÄworkÖµ£¬È»ºói=0£¬ÖØĞÂ´Ó¿ªÊ¼µÄÎª·ÖÅäµÄÖĞÑ°ÕÒ
-				System.out.println("·ÖÅä³É¹¦µÄÊÇ"+i);
+			if(finish[i]==false&&need[i][0]<=work[0]&&need[i][1]<=work[1]&&need[i][2]<=work[2]){//æ‰¾åˆ°æ»¡è¶³çš„ä¿®æ”¹workå€¼ï¼Œç„¶åi=0ï¼Œé‡æ–°ä»å¼€å§‹çš„ä¸ºåˆ†é…çš„ä¸­å¯»æ‰¾
+				System.out.println("åˆ†é…æˆåŠŸçš„æ˜¯"+i);
 			for(int m = 0;m<3;m++)
 				work[m] =work[m] + allocation[i][m];
 			finish[i] = true;
 			i=0;
-			}else//Èç¹ûÃ»ÓĞÕÒµ½Ö±½Ói++
+			}else//å¦‚æœæ²¡æœ‰æ‰¾åˆ°ç›´æ¥i++
 				i++;
 			}
 	
@@ -110,21 +110,21 @@ public class Banker{
 	
 	String choice = new String();
 	
-	while(true)//Ñ­»·½øĞĞ·ÖÅä
+	while(true)//å¾ªç¯è¿›è¡Œåˆ†é…
 	
 	{
 	
-	System.out.println("ÇëÊäÈëÒªÇëÇóµÄ½ø³ÌºÅ£¨0--4£©£º");
+	System.out.println("è¯·è¾“å…¥è¦è¯·æ±‚çš„è¿›ç¨‹å·ï¼ˆ0--4ï¼‰ï¼š");
 	
 	requestNum = s.nextInt();
 	
-	System.out.print("ÇëÊäÈëÇëÇóµÄ×ÊÔ´ÊıÄ¿");
+	System.out.print("è¯·è¾“å…¥è¯·æ±‚çš„èµ„æºæ•°ç›®");
 	
 	for(int i = 0;i<3;i++)
 	
 	{
 	
-	System.out.println(source[i]+"×ÊÔ´µÄÊıÄ¿£º");
+	System.out.println(source[i]+"èµ„æºçš„æ•°ç›®ï¼š");
 	
 	request[i] = s.nextInt();
 	
@@ -132,7 +132,7 @@ public class Banker{
 	
 	bank.change(requestNum, request);
 	
-	System.out.println("ÊÇ·ñÔÙÇëÇó·ÖÅä(y/n)");
+	System.out.println("æ˜¯å¦å†è¯·æ±‚åˆ†é…(y/n)");
 	
 	choice = s.next();
 	

@@ -1,7 +1,7 @@
 package com.duweri.interview.string;
 /**
- * ×Ö·û´®ÄÚ´æ·ÖÅä
- * @author ¶ÅÎ°
+ * å­—ç¬¦ä¸²å†…å­˜åˆ†é…
+ * @author æœä¼Ÿ
  */
 public class StringTest {
 

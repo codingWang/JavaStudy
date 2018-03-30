@@ -7,12 +7,12 @@ public class Test_2 {
 		Integer j = new Integer(3000);
 		
 		System.out.println(i == j);
-		//×Ô¶¯²ğÏä
+		//è‡ªåŠ¨æ‹†ç®±
 		
 		System.out.println(j.equals(i));
-		//×Ô¶¯×°Ïä
-		//IntegerµÄequals·½·¨±È½ÏµÄÊÇÖµ²»ÊÇµØÖ·
-		//String,Integer,DateÔÚÕâĞ©Ààµ±ÖĞequalsÓĞÆä×ÔÉíµÄÊµÏÖ£¬¶ø²»ÔÙÊÇ±È½ÏÀàÔÚ¶ÑÄÚ´æÖĞµÄ´æ·ÅµØÖ·ÁË¡£
+		//è‡ªåŠ¨è£…ç®±
+		//Integerçš„equalsæ–¹æ³•æ¯”è¾ƒçš„æ˜¯å€¼ä¸æ˜¯åœ°å€
+		//String,Integer,Dateåœ¨è¿™äº›ç±»å½“ä¸­equalsæœ‰å…¶è‡ªèº«çš„å®ç°ï¼Œè€Œä¸å†æ˜¯æ¯”è¾ƒç±»åœ¨å †å†…å­˜ä¸­çš„å­˜æ”¾åœ°å€äº†ã€‚
 	}
 
 }
