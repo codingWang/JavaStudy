@@ -1,7 +1,7 @@
 package com.duwei.thinkingjava.innerclass;
 /**
- * ÄÚ²¿Àà·ÃÎÊÍâ²¿ÀàµÄÊôĞÔ
- * @author ¶ÅÎ°
+ * å†…éƒ¨ç±»è®¿é—®å¤–éƒ¨ç±»çš„å±æ€§
+ * @author æœä¼Ÿ
  */
 public class OutterClassField {
 	
@@ -12,9 +12,9 @@ public class OutterClassField {
 	class Chinese{
 		
 		public void say(){
-			//ÄÚ²¿Àà·ÃÎÊÍâ²¿ÀàµÄË½ÓĞÊôĞÔ
-			System.out.println("ÄÚ²¿Àà·ÃÎÊÍâ²¿ÀàµÄË½ÓĞÊôĞÔ"+new OutterClassField().name);
-			System.out.println("ÄÚ²¿Àà·ÃÎÊÍâ²¿ÀàµÄ¹«ÓĞÊôĞÔ"+new OutterClassField().sex);
+			//å†…éƒ¨ç±»è®¿é—®å¤–éƒ¨ç±»çš„ç§æœ‰å±æ€§
+			System.out.println("å†…éƒ¨ç±»è®¿é—®å¤–éƒ¨ç±»çš„ç§æœ‰å±æ€§"+new OutterClassField().name);
+			System.out.println("å†…éƒ¨ç±»è®¿é—®å¤–éƒ¨ç±»çš„å…¬æœ‰å±æ€§"+new OutterClassField().sex);
 			
 		}
 		

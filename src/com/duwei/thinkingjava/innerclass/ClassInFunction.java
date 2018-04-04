@@ -1,13 +1,16 @@
 package com.duwei.thinkingjava.innerclass;
 
+/**
+ * æ¼”ç¤ºåœ¨æ–¹æ³•é‡Œé¢å£°æ˜ç±»ï¼Œ
+ */
 public class ClassInFunction {
 	
-	//ÀàÀïÃæ·Åinterface
+	//ç±»é‡Œé¢æ”¾interface
 	interface Destination{
 		String readLabel();
 	}
 	
-	//·½·¨ÀïÃæÓĞ¸öÀà
+	//æ–¹æ³•é‡Œé¢æœ‰ä¸ªç±»
 	public Destination destination(String s){
 		
 		class pDestination implements Destination{

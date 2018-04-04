@@ -17,14 +17,14 @@ public class PrivateInnerClassTest {
 		}
 		
 		public void say(){
-			System.out.println("xµÄÖµ"+x);//·ÃÎÊÍâ²¿ÀàµÄË½ÓĞ·½·¨
+			System.out.println("xçš„å€¼"+x);//è®¿é—®å¤–éƒ¨ç±»çš„ç§æœ‰æ–¹æ³•
 		}
 	}
 	
 
 	public static void main(String[] args) {
 		
-		Inner f = new PrivateInnerClassTest().new Inner();//¿ÉÒÔ·ÃÎÊË½ÓĞÄÚ²¿Àà
+		Inner f = new PrivateInnerClassTest().new Inner();//å¯ä»¥è®¿é—®ç§æœ‰å†…éƒ¨ç±»
 		
 		System.out.println(f.add(10, 20));
 		f.say();

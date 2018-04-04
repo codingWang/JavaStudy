@@ -1,15 +1,15 @@
 package com.duwei.thinkingjava.innerclass;
 /**
- * ¾²Ì¬ÄÚ²¿Àà
- * @author ¶ÅÎ°
+ * é™æ€å†…éƒ¨ç±»
+ * @author æœä¼Ÿ
  */
 public class StaticInnerClassTest {
 	private String name = "StaticInnerClassTest";
 	private static String name2 = "StaticInnerClassTest2";
 	
-	interface InnerClassInterface{	//½Ó¿ÚÀïÃæ¶¨ÒåÀà
+	interface InnerClassInterface{	//æ¥å£é‡Œé¢å®šä¹‰ç±»
 		void print();
-		class TestInnerClassInterface implements InnerClassInterface{//½Ó¿ÚÀïÃæµÄÀà¿ÉÒÔÊµÏÖ¸Ã½Ó¿Ú
+		class TestInnerClassInterface implements InnerClassInterface{//æ¥å£é‡Œé¢çš„ç±»å¯ä»¥å®ç°è¯¥æ¥å£
 			@Override
 			public void print() {
 				System.out.println("InnerClassInterface");
@@ -23,7 +23,7 @@ public class StaticInnerClassTest {
 		public void say(){
 			System.out.println("inner="+name);
 			System.out.println("age="+age);
-			//System.out.println(StaticInnerClassTest.this.name);//ÄÚ²¿ÀàÏÈ¼ÓÔØÁË£¬Íâ²¿Àà²»¿É´ï
+			//System.out.println(StaticInnerClassTest.this.name);//å†…éƒ¨ç±»å…ˆåŠ è½½äº†ï¼Œå¤–éƒ¨ç±»ä¸å¯è¾¾
 		}
 	}
 

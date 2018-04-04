@@ -1,49 +1,51 @@
 package com.duwei.thinkingjava.innerclass;
+
 /**
- * ·ÃÎÊ·Ç¾²Ì¬ÄÚ²¿ÀàµÄ·½·¨
- * ·ÃÎÊÍâ²¿ÀàµÄÊôĞÔ
- * @author ¶ÅÎ°
+ * è®¿é—®éé™æ€å†…éƒ¨ç±»çš„æ–¹æ³•
+ * è®¿é—®å¤–éƒ¨ç±»çš„å±æ€§
+ *
+ * @author æœä¼Ÿ
  */
 public class OutterClass {
-	private String name = "duwei";		//Ë½ÓĞ±äÁ¿
-	public String sex = "man";			//¹«ÓĞ±äÁ¿
-	private static int age = 15;		//¾²Ì¬±äÁ¿
-	
-	interface IPrintString{
-		String print();
-	}
+    private String name = "duwei";        //ç§æœ‰å˜é‡
+    public String sex = "man";            //å…¬æœ‰å˜é‡
+    private static int age = 15;        //é™æ€å˜é‡
 
-	public String sayOutter()  {		//¾Ö²¿ÄÚ²¿Àà
-		class PrintString implements IPrintString{
-			@Override
-			public String print() {
-				return "Outter";
-			}
-		}
-		return new PrintString().print();
-	}
-	
-	public String sayOutter2(){
-		return new IPrintString() {		//ÕâÊÇÄäÃûÄÚ²¿Àà
-			@Override
-			public String print() {
-				return "Outter2";
-			}
-		}.print();
-	}
+    interface IPrintString {
+        String print();
+    }
 
-	class InnerClass {
-		//private static String name = "123";//²»¿ÉÒÔÓĞ¾²Ì¬±äÁ¿
-		public void sayInner() {			//·ÃÎÊÍâ²¿ÀàµÄË½ÓĞ£¬¹²ÓĞ£¬¾²Ì¬ÊôĞÔ
-			System.out.println("inner£ºname="+name+",sex="+sex+",age = "+age);
-			System.out.println(OutterClass.this.sayOutter()+";ÄäÃûÄÚ²¿Àà£º"
-			+OutterClass.this.sayOutter2());//·ÃÎÊÍâ²¿ÀàµÄ·½·¨
-		}
-	}
+    public String sayOutter() {        //å±€éƒ¨å†…éƒ¨ç±»
+        class PrintString implements IPrintString {
+            @Override
+            public String print() {
+                return "Outter";
+            }
+        }
+        return new PrintString().print();
+    }
 
-	public static void main(String[] args) {
-		OutterClass outter = new OutterClass();
-		InnerClass inner = outter.new InnerClass();//ÄÚ²¿Àà¶ÔÏóµÄ³õÊ¼»¯·½Ê½
-		inner.sayInner();
-	}
+    public String sayOutter2() {
+        return new IPrintString() {        //è¿™æ˜¯åŒ¿åå†…éƒ¨ç±»
+            @Override
+            public String print() {
+                return "Outter2";
+            }
+        }.print();
+    }
+
+    class InnerClass {
+        //private static String name = "123";//å†…éƒ¨ç±»ä¸å¯ä»¥æœ‰é™æ€å˜é‡
+        public void sayInner() {            //è®¿é—®å¤–éƒ¨ç±»çš„ç§æœ‰ï¼Œå…±æœ‰ï¼Œé™æ€å±æ€§
+            System.out.println("innerï¼šname=" + name + ",sex=" + sex + ",age = " + age);
+            System.out.println(OutterClass.this.sayOutter() + ";åŒ¿åå†…éƒ¨ç±»ï¼š"
+                    + OutterClass.this.sayOutter2());//è®¿é—®å¤–éƒ¨ç±»çš„æ–¹æ³•
+        }
+    }
+
+    public static void main(String[] args) {
+        OutterClass outter = new OutterClass();
+        InnerClass inner = outter.new InnerClass();//å†…éƒ¨ç±»å¯¹è±¡çš„åˆå§‹åŒ–æ–¹å¼
+        inner.sayInner();
+    }
 }
