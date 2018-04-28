@@ -1,6 +1,6 @@
 package com.duwei.designpattern.state2;
 
-//ÊÜÏÞ×´Ì¬£º¾ßÌå×´Ì¬Àà  
+//å—é™çŠ¶æ€ï¼šå…·ä½“çŠ¶æ€ç±»  
 class RestrictedState extends AccountState {  
   public RestrictedState(AccountState state) {  
       this.acc = state.acc;  
@@ -12,14 +12,14 @@ class RestrictedState extends AccountState {
   }  
     
   public void withdraw(double amount) {  
-      System.out.println("ÕÊºÅÊÜÏÞ£¬È¡¿îÊ§°Ü");  
+      System.out.println("å¸å·å—é™ï¼Œå–æ¬¾å¤±è´¥");  
   }  
     
   public void computeInterest() {  
-      System.out.println("¼ÆËãÀûÏ¢£¡");  
+      System.out.println("è®¡ç®—åˆ©æ¯ï¼");  
   }  
     
-  //×´Ì¬×ª»»  
+  //çŠ¶æ€è½¬æ¢  
   public void stateCheck() {  
       if(acc.getBalance() > 0) {  
           acc.setState(new NormalState(this));  

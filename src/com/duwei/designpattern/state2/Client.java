@@ -2,7 +2,7 @@ package com.duwei.designpattern.state2;
 
 class Client {  
     public static void main(String args[]) {  
-        Account acc = new Account("¶ÎÓþ",0.0);  
+        Account acc = new Account("æ®µèª‰",0.0);  
         acc.deposit(1000);  
         acc.withdraw(2000);  
         acc.deposit(3000);  

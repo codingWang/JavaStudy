@@ -12,7 +12,7 @@ public class RunningState extends LiftState{
 
 	@Override
 	public void run() {
-		System.out.println("µçÌİÉÏÏÂÔËĞĞ¡£¡£¡£");
+		System.out.println("ç”µæ¢¯ä¸Šä¸‹è¿è¡Œã€‚ã€‚ã€‚");
 		
 	}
 

@@ -1,7 +1,7 @@
 package com.duwei.designpattern.state;
 /**
- * 电梯状态抽象类
- * @author 杜伟
+ * 鐢垫鐘舵�佹娊璞＄被
+ * @author 鏉滀紵
  */
 public abstract class LiftState {
 	protected Context context;

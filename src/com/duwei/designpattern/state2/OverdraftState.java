@@ -1,6 +1,6 @@
 package com.duwei.designpattern.state2;
 
-//Í¸Ö§×´Ì¬£º¾ßÌå×´Ì¬Àà  
+//é€æ”¯çŠ¶æ€ï¼šå…·ä½“çŠ¶æ€ç±»  
 class OverdraftState extends AccountState  
 {  
   public OverdraftState(AccountState state) {  
@@ -18,10 +18,10 @@ class OverdraftState extends AccountState
   }  
     
   public void computeInterest() {  
-      System.out.println("¼ÆËãÀûÏ¢£¡");  
+      System.out.println("è®¡ç®—åˆ©æ¯ï¼");  
   }  
     
-  //×´Ì¬×ª»»  
+  //çŠ¶æ€è½¬æ¢  
   public void stateCheck() {  
       if (acc.getBalance() > 0) {  
           acc.setState(new NormalState(this));  
@@ -30,7 +30,7 @@ class OverdraftState extends AccountState
           acc.setState(new RestrictedState(this));  
       }  
       else if (acc.getBalance() < -2000) {  
-          System.out.println("²Ù×÷ÊÜÏÞ£¡");  
+          System.out.println("æ“ä½œå—é™ï¼");  
       }  
   }  
 }  

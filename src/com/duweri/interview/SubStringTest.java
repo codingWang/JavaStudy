@@ -9,11 +9,11 @@ public class SubStringTest {
 	}
 
 	public static void out() {
-		String str = "ÎÒ°®ÄãÃÇ,Äã°®Ëû,Ëû°®ËıÃÇ¼ÓÒ»,Ëı°®Ëû";
+		String str = "æˆ‘çˆ±ä½ ä»¬,ä½ çˆ±ä»–,ä»–çˆ±å¥¹ä»¬åŠ ä¸€,å¥¹çˆ±ä»–";
 		String temp = str + ",";
 		List<String> list = new ArrayList<>();
 		while (true) {
-			String splitStr = null; // ±£Áô½ØÈ¡µÄ×Ö·û´®
+			String splitStr = null; // ä¿ç•™æˆªå–çš„å­—ç¬¦ä¸²
 			int index = temp.indexOf(",");
 			if (index < 0) {
 				break;

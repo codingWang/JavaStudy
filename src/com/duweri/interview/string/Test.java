@@ -1,4 +1,4 @@
-package com.duweri.interview;
+package com.duweri.interview.string;
 
 public class Test {
 
@@ -18,13 +18,13 @@ public class Test {
 	
 	private static final String MESSAGE="taobao";
 	  public static void main(String [] args) {
-	    String a ="tao"+"bao";//ÔÚ³ØÖĞ´´½¨taoºÍbao£¬²¢Ö¸Ïò¡°taobao¡±¶ÔÏó
-	    String b="tao";//Ö¸Ïò³ØÖĞµÄtao
-	    String c="bao";//Ö¸Ïò³ØÖĞµÄbao
-	    String d = b+c;//¶ÑÖĞ´´½¨d
+	    String a ="tao"+"bao";//åœ¨æ± ä¸­åˆ›å»ºtaoå’Œbaoï¼Œå¹¶æŒ‡å‘â€œtaobaoâ€å¯¹è±¡
+	    String b="tao";//æŒ‡å‘æ± ä¸­çš„tao
+	    String c="bao";//æŒ‡å‘æ± ä¸­çš„bao
+	    String d = b+c;//å †ä¸­åˆ›å»ºd
 	    System.out.println(a==MESSAGE);
 	    System.out.println("-------------");
-	    System.out.println((b+c)==MESSAGE);//¶ÔÏó
+	    System.out.println((b+c)==MESSAGE);//å¯¹è±¡
 	    
 	    System.out.println(d.hashCode()+"+"+MESSAGE.hashCode());
 	    System.out.println((b+c).length()+"+"+MESSAGE.length());

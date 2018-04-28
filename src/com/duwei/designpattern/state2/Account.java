@@ -1,15 +1,15 @@
 package com.duwei.designpattern.state2;
-//ÒøĞĞÕË»§£º»·¾³Àà  
+//é“¶è¡Œè´¦æˆ·ï¼šç¯å¢ƒç±»  
 class Account {  
-  private AccountState state; //Î¬³ÖÒ»¸ö¶Ô³éÏó×´Ì¬¶ÔÏóµÄÒıÓÃ  
-  private String owner; //¿ª»§Ãû  
-  private double balance = 0; //ÕË»§Óà¶î  
+  private AccountState state; //ç»´æŒä¸€ä¸ªå¯¹æŠ½è±¡çŠ¶æ€å¯¹è±¡çš„å¼•ç”¨  
+  private String owner; //å¼€æˆ·å  
+  private double balance = 0; //è´¦æˆ·ä½™é¢  
     
   public Account(String owner,double init) {  
       this.owner = owner;  
       this.balance = balance;  
-      this.state = new NormalState(this); //ÉèÖÃ³õÊ¼×´Ì¬  
-      System.out.println(this.owner + "¿ª»§£¬³õÊ¼½ğ¶îÎª" + init);   
+      this.state = new NormalState(this); //è®¾ç½®åˆå§‹çŠ¶æ€  
+      System.out.println(this.owner + "å¼€æˆ·ï¼Œåˆå§‹é‡‘é¢ä¸º" + init);   
       System.out.println("---------------------------------------------");      
   }  
     
@@ -26,23 +26,23 @@ class Account {
   }  
     
   public void deposit(double amount) {  
-      System.out.println(this.owner + "´æ¿î" + amount);  
-      state.deposit(amount); //µ÷ÓÃ×´Ì¬¶ÔÏóµÄdeposit()·½·¨  
-      System.out.println("ÏÖÔÚÓà¶îÎª"+ this.balance);  
-      System.out.println("ÏÖÔÚÕÊ»§×´Ì¬Îª"+ this.state.getClass().getName());  
+      System.out.println(this.owner + "å­˜æ¬¾" + amount);  
+      state.deposit(amount); //è°ƒç”¨çŠ¶æ€å¯¹è±¡çš„deposit()æ–¹æ³•  
+      System.out.println("ç°åœ¨ä½™é¢ä¸º"+ this.balance);  
+      System.out.println("ç°åœ¨å¸æˆ·çŠ¶æ€ä¸º"+ this.state.getClass().getName());  
       System.out.println("---------------------------------------------");              
   }  
     
   public void withdraw(double amount) {  
-      System.out.println(this.owner + "È¡¿î" + amount);  
-      state.withdraw(amount); //µ÷ÓÃ×´Ì¬¶ÔÏóµÄwithdraw()·½·¨  
-      System.out.println("ÏÖÔÚÓà¶îÎª"+ this.balance);  
-      System.out.println("ÏÖÔÚÕÊ»§×´Ì¬Îª"+ this. state.getClass().getName());          
+      System.out.println(this.owner + "å–æ¬¾" + amount);  
+      state.withdraw(amount); //è°ƒç”¨çŠ¶æ€å¯¹è±¡çš„withdraw()æ–¹æ³•  
+      System.out.println("ç°åœ¨ä½™é¢ä¸º"+ this.balance);  
+      System.out.println("ç°åœ¨å¸æˆ·çŠ¶æ€ä¸º"+ this. state.getClass().getName());          
       System.out.println("---------------------------------------------");  
   }  
     
   public void computeInterest()  
   {  
-      state.computeInterest(); //µ÷ÓÃ×´Ì¬¶ÔÏóµÄcomputeInterest()·½·¨  
+      state.computeInterest(); //è°ƒç”¨çŠ¶æ€å¯¹è±¡çš„computeInterest()æ–¹æ³•  
   }  
 }  

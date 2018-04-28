@@ -4,7 +4,7 @@ public class OpeningState extends LiftState{
 
 	@Override
 	public void open() {
-		System.out.println("µçÌÝÃÅ¿ªÁË¡£¡£¡£");
+		System.out.println("ç”µæ¢¯é—¨å¼€äº†ã€‚ã€‚ã€‚");
 	}
 
 	@Override

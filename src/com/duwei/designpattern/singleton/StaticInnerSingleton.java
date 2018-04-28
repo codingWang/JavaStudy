@@ -4,13 +4,13 @@ class StaticInnerSingleton {
     private StaticInnerSingleton() {}  
       
     private static class HolderClass {  
-    	//¾²Ì¬ÊµÀıÊôÓÚÀà£¬ËùÓĞHolderClass¶ÔÏó¹²ÏíÒ»¸öSingletonÊµÀı£¬
-    	//±£Ö¤Ïß³Ì°²È«
+    	//é™æ€å®ä¾‹å±äºç±»ï¼Œæ‰€æœ‰HolderClasså¯¹è±¡å…±äº«ä¸€ä¸ªSingletonå®ä¾‹ï¼Œ
+    	//ä¿è¯çº¿ç¨‹å®‰å…¨
         private final static StaticInnerSingleton instance = new StaticInnerSingleton();  
     }  
       
     public static StaticInnerSingleton getInstance() {  
         return HolderClass.instance;  
-        //³õÊ¼»¯ÀàÊ±²Å³õÊ¼»¯Íâ²¿Àà¶ÔÏó£ºÀÁ¼ÓÔØ
+        //åˆå§‹åŒ–ç±»æ—¶æ‰åˆå§‹åŒ–å¤–éƒ¨ç±»å¯¹è±¡ï¼šæ‡’åŠ è½½
     }  
 }  

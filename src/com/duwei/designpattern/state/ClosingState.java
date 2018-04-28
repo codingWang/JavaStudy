@@ -10,7 +10,7 @@ public class ClosingState extends LiftState{
 
 	@Override
 	public void close() {
-		System.out.println("µçÌÝÃÅ¹Ø±Õ¡£¡£¡£");
+		System.out.println("ç”µæ¢¯é—¨å…³é—­ã€‚ã€‚ã€‚");
 	}
 
 	@Override

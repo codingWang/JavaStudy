@@ -1,9 +1,9 @@
 package com.duwei.designpattern.state;
 /**
- * ״̬ģʽ�Ķ��壺
- * ��һ����������״̬�ı�ʱ������ı���Ϊ
- * ״̬�ĸı���������Ϊ�ĸı�
- * @author ��ΰ
+ * 状态模式的定义：
+ * 当一个对象内在状态改变时允许其改变行为
+ * 状态的改变引起了行为的改变
+ * @author 杜伟
  *
  */
 public class Client {

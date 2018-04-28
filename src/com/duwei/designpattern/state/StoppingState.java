@@ -22,7 +22,7 @@ public class StoppingState extends LiftState{
 
 	@Override
 	public void stop() {
-		System.out.println("µçÌİÍ£Ö¹ÁË¡£¡£¡£");
+		System.out.println("ç”µæ¢¯åœæ­¢äº†ã€‚ã€‚ã€‚");
 	}
 
 }

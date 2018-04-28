@@ -1,6 +1,6 @@
 package com.duwei.designpattern.state2;
 
-//³éÏó×´Ì¬Àà  
+//æŠ½è±¡çŠ¶æ€ç±»  
 abstract class AccountState {  
   protected Account acc;  
   public abstract void deposit(double amount);  

@@ -7,7 +7,7 @@ public class Context {
 	public static final RunningState RUNNING_STATE = new RunningState();
 	public static final StoppingState STOPPING_STATE = new StoppingState();
 	
-	/**内部状态的控制*/
+	/**鍐呴儴鐘舵�佺殑鎺у埗*/
 	private LiftState liftState;
 	
 	public LiftState getLiftState(){
