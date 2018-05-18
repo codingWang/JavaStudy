@@ -1,22 +1,20 @@
 package com.duwei.designpattern.simplefictory;
 
-//Í¼±í¹¤³§Àà£º¹¤³§Àà  
-class ChartFactory {  
-  //¾²Ì¬¹¤³§·½·¨  
-  public static Chart getChart(String type) {  
-      Chart chart = null;  
-      if (type.equalsIgnoreCase("histogram")) {  
-          chart = new HistogramChart();  
-          System.out.println("³õÊ¼»¯ÉèÖÃÖù×´Í¼£¡");  
-      }  
-      else if (type.equalsIgnoreCase("pie")) {  
-          chart = new PieChart();  
-          System.out.println("³õÊ¼»¯ÉèÖÃ±ı×´Í¼£¡");  
-      }  
-      else if (type.equalsIgnoreCase("line")) {  
-          chart = new LineChart();  
-          System.out.println("³õÊ¼»¯ÉèÖÃÕÛÏßÍ¼£¡");              
-      }  
-      return chart;  
-  }  
+//å›¾è¡¨å·¥å‚ç±»ï¼šå·¥å‚ç±»  
+class ChartFactory {
+    //é™æ€å·¥å‚æ–¹æ³•
+    public static Chart getChart(String type) {
+        Chart chart = null;
+        if (type.equalsIgnoreCase("histogram")) {
+            chart = new HistogramChart();
+            System.out.println("åˆå§‹åŒ–è®¾ç½®æŸ±çŠ¶å›¾ï¼");
+        } else if (type.equalsIgnoreCase("pie")) {
+            chart = new PieChart();
+            System.out.println("åˆå§‹åŒ–è®¾ç½®é¥¼çŠ¶å›¾ï¼");
+        } else if (type.equalsIgnoreCase("line")) {
+            chart = new LineChart();
+            System.out.println("åˆå§‹åŒ–è®¾ç½®æŠ˜çº¿å›¾ï¼");
+        }
+        return chart;
+    }
 }  

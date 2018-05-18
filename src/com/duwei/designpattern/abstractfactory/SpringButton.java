@@ -1,8 +1,8 @@
 package com.duwei.designpattern.abstractfactory;
 
-//Spring°´Å¥Àà£º¾ßÌå²úÆ·  
+//SpringæŒ‰é’®ç±»ï¼šå…·ä½“äº§å“  
 class SpringButton implements Button {  
   public void display() {  
-      System.out.println("ÏÔÊ¾Ç³ÂÌÉ«°´Å¥¡£");  
+      System.out.println("æ˜¾ç¤ºæµ…ç»¿è‰²æŒ‰é’®ã€‚");  
   }  
 }  

@@ -1,8 +1,8 @@
 package com.duwei.designpattern.factorymethod;
 
-//Êı¾İ¿âÈÕÖ¾¼ÇÂ¼Æ÷£º¾ßÌå²úÆ·  
+//æ•°æ®åº“æ—¥å¿—è®°å½•å™¨ï¼šå…·ä½“äº§å“  
 class DatabaseLogger implements Logger {  
   public void writeLog() {  
-      System.out.println("Êı¾İ¿âÈÕÖ¾¼ÇÂ¼¡£");  
+      System.out.println("æ•°æ®åº“æ—¥å¿—è®°å½•ã€‚");  
   }  
 }  

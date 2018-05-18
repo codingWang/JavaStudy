@@ -1,6 +1,6 @@
 package com.duwei.designpattern.factorymethod;
 
-//日志记录器工厂接口：抽象工厂  
+//鏃ュ織璁板綍鍣ㄥ伐鍘傛帴鍙ｏ細鎶借薄宸ュ巶  
 interface LoggerFactory {  
   public Logger createLogger();  
 }  

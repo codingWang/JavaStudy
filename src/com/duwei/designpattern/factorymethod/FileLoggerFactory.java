@@ -1,11 +1,11 @@
 package com.duwei.designpattern.factorymethod;
 
-//ÎÄ¼şÈÕÖ¾¼ÇÂ¼Æ÷¹¤³§Àà£º¾ßÌå¹¤³§  
+//æ–‡ä»¶æ—¥å¿—è®°å½•å™¨å·¥å‚ç±»ï¼šå…·ä½“å·¥å‚  
 class FileLoggerFactory implements LoggerFactory {  
   public Logger createLogger() {  
-          //´´½¨ÎÄ¼şÈÕÖ¾¼ÇÂ¼Æ÷¶ÔÏó  
+          //åˆ›å»ºæ–‡ä»¶æ—¥å¿—è®°å½•å™¨å¯¹è±¡  
           Logger logger = new FileLogger();   
-          //´´½¨ÎÄ¼ş£¬´úÂëÊ¡ÂÔ  
+          //åˆ›å»ºæ–‡ä»¶ï¼Œä»£ç çœç•¥  
           return logger;  
   }     
 }  

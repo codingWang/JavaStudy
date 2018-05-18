@@ -1,12 +1,12 @@
 package com.duwei.designpattern.simplefictory;
 
-//折线图类：具体产品类  
+//鎶樼嚎鍥剧被锛氬叿浣撲骇鍝佺被  
 class LineChart implements Chart {  
   public LineChart() {  
-      System.out.println("创建折线图！");  
+      System.out.println("鍒涘缓鎶樼嚎鍥撅紒");  
   }  
     
   public void display() {  
-      System.out.println("显示折线图！");  
+      System.out.println("鏄剧ず鎶樼嚎鍥撅紒");  
   }  
 }  

@@ -1,12 +1,12 @@
 package com.duwei.designpattern.simplefictory;
 
-//柱状图类：具体产品类  
+//鏌辩姸鍥剧被锛氬叿浣撲骇鍝佺被  
 class HistogramChart implements Chart {  
   public HistogramChart() {  
-      System.out.println("创建柱状图！");  
+      System.out.println("鍒涘缓鏌辩姸鍥撅紒");  
   }  
     
   public void display() {  
-      System.out.println("显示柱状图！");  
+      System.out.println("鏄剧ず鏌辩姸鍥撅紒");  
   }  
 }  

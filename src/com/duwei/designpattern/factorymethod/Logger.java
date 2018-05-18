@@ -1,6 +1,6 @@
 package com.duwei.designpattern.factorymethod;
 
-//日志记录器接口：抽象产品  
+//鏃ュ織璁板綍鍣ㄦ帴鍙ｏ細鎶借薄浜у搧  
 interface Logger {  
   public void writeLog();  
 }  

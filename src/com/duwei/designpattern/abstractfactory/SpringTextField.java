@@ -1,8 +1,8 @@
 package com.duwei.designpattern.abstractfactory;
 
-//SpringÎÄ±¾¿òÀà£º¾ßÌå²úÆ·  
+//Springæ–‡æœ¬æ¡†ç±»ï¼šå…·ä½“äº§å“  
 class SpringTextField implements TextField {  
     public void display() {  
-        System.out.println("ÏÔÊ¾ÂÌÉ«±ß¿òÎÄ±¾¿ò¡£");  
+        System.out.println("æ˜¾ç¤ºç»¿è‰²è¾¹æ¡†æ–‡æœ¬æ¡†ã€‚");  
     }  
 }  

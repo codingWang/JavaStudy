@@ -3,7 +3,7 @@ package com.duwei.designpattern.simplefictory;
 class Client {  
     public static void main(String args[]) {  
         Chart chart;  
-        chart = ChartFactory.getChart("histogram"); //Í¨¹ı¾²Ì¬¹¤³§·½·¨´´½¨²úÆ·  
+        chart = ChartFactory.getChart("histogram"); //é€šè¿‡é™æ€å·¥å‚æ–¹æ³•åˆ›å»ºäº§å“  
         chart.display();  
     }  
 }  

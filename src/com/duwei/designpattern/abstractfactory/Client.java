@@ -2,7 +2,7 @@ package com.duwei.designpattern.abstractfactory;
 
 class Client {  
     public static void main(String args[]) {  
-        //Ê¹ÓÃ³éÏó²ã¶¨Òå  
+        //ä½¿ç”¨æŠ½è±¡å±‚å®šä¹‰  
         SkinFactory factory;  
         Button bt;  
         TextField tf;  

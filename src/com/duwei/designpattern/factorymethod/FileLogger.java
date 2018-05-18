@@ -1,8 +1,8 @@
 package com.duwei.designpattern.factorymethod;
 
-//ÎÄ¼şÈÕÖ¾¼ÇÂ¼Æ÷£º¾ßÌå²úÆ·  
+//æ–‡ä»¶æ—¥å¿—è®°å½•å™¨ï¼šå…·ä½“äº§å“  
 class FileLogger implements Logger {  
   public void writeLog() {  
-      System.out.println("ÎÄ¼şÈÕÖ¾¼ÇÂ¼¡£");  
+      System.out.println("æ–‡ä»¶æ—¥å¿—è®°å½•ã€‚");  
   }  
 }  

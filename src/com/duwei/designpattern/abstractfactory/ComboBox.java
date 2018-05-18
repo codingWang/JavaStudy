@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//组合框接口：抽象产品  
+//缁勫悎妗嗘帴鍙ｏ細鎶借薄浜у搧  
 interface ComboBox {  
   public void display();  
 }  

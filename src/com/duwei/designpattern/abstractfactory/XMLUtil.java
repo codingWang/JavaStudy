@@ -8,21 +8,21 @@ import org.xml.sax.SAXException;
 import java.io.*;  
 
 public class XMLUtil {  
-	//¸Ã·½·¨ÓÃÓÚ´ÓXMLÅäÖÃÎÄ¼şÖĞÌáÈ¡¾ßÌåÀàÀàÃû£¬²¢·µ»ØÒ»¸öÊµÀı¶ÔÏó  
+	//è¯¥æ–¹æ³•ç”¨äºä»XMLé…ç½®æ–‡ä»¶ä¸­æå–å…·ä½“ç±»ç±»åï¼Œå¹¶è¿”å›ä¸€ä¸ªå®ä¾‹å¯¹è±¡  
 	    public static Object getBean() {  
 	        try {  
-	            //´´½¨ÎÄµµ¶ÔÏó  
+	            //åˆ›å»ºæ–‡æ¡£å¯¹è±¡  
 	            DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();  
 	            DocumentBuilder builder = dFactory.newDocumentBuilder();  
 	            Document doc;                             
 	            doc = builder.parse(new File("src\\com\\duwei\\designpattern\\abstractfactory\\config.xml"));   
 	          
-	            //»ñÈ¡°üº¬ÀàÃûµÄÎÄ±¾½Úµã  
+	            //è·å–åŒ…å«ç±»åçš„æ–‡æœ¬èŠ‚ç‚¹  
 	            NodeList nl = doc.getElementsByTagName("className");  
 	            Node classNode=nl.item(0).getFirstChild();  
 	            String cName=classNode.getNodeValue();  
 	              
-	            //Í¨¹ıÀàÃûÉú³ÉÊµÀı¶ÔÏó²¢½«Æä·µ»Ø  
+	            //é€šè¿‡ç±»åç”Ÿæˆå®ä¾‹å¯¹è±¡å¹¶å°†å…¶è¿”å›  
 	            Class c=Class.forName(cName);  
 	            Object obj=c.newInstance();  
 	            return obj;  

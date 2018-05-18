@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//SummerÆ¤·ô¹¤³§£º¾ßÌå¹¤³§  
+//Summerçš®è‚¤å·¥åŽ‚ï¼šå…·ä½“å·¥åŽ‚  
 class SummerSkinFactory implements SkinFactory {  
   public Button createButton() {  
       return new SummerButton();  

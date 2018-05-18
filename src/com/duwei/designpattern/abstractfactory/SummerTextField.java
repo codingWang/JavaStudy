@@ -1,8 +1,8 @@
 package com.duwei.designpattern.abstractfactory;
 
-//SummerÎÄ±¾¿òÀà£º¾ßÌå²úÆ·  
+//Summeræ–‡æœ¬æ¡†ç±»ï¼šå…·ä½“äº§å“  
 class SummerTextField implements TextField {  
   public void display() {  
-      System.out.println("ÏÔÊ¾À¶É«±ß¿òÎÄ±¾¿ò¡£");  
+      System.out.println("æ˜¾ç¤ºè“è‰²è¾¹æ¡†æ–‡æœ¬æ¡†ã€‚");  
   }     
 }  

@@ -1,8 +1,8 @@
 package com.duwei.designpattern.abstractfactory;
 
-//Summer°´Å¥Àà£º¾ßÌå²úÆ·  
+//SummeræŒ‰é’®ç±»ï¼šå…·ä½“äº§å“  
 class SummerButton implements Button {  
   public void display() {  
-      System.out.println("ÏÔÊ¾Ç³À¶É«°´Å¥¡£");  
+      System.out.println("æ˜¾ç¤ºæµ…è“è‰²æŒ‰é’®ã€‚");  
   }     
 }  

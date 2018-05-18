@@ -1,8 +1,8 @@
 package com.duwei.designpattern.abstractfactory;
 
-//Spring×éºÏ¿òÀà£º¾ßÌå²úÆ·  
+//Springç»„åˆæ¡†ç±»ï¼šå…·ä½“äº§å“  
 class SpringComboBox implements ComboBox {  
   public void display() {  
-      System.out.println("ÏÔÊ¾ÂÌÉ«±ß¿ò×éºÏ¿ò¡£");  
+      System.out.println("æ˜¾ç¤ºç»¿è‰²è¾¹æ¡†ç»„åˆæ¡†ã€‚");  
   }  
 }  

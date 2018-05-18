@@ -1,12 +1,12 @@
 package com.duwei.designpattern.factorymethod;
 
-//数据库日志记录器工厂类：具体工厂  
+//鏁版嵁搴撴棩蹇楄褰曞櫒宸ュ巶绫伙細鍏蜂綋宸ュ巶  
 class DatabaseLoggerFactory implements LoggerFactory {  
   public Logger createLogger() {  
-          //连接数据库，代码省略  
-          //创建数据库日志记录器对象  
+          //杩炴帴鏁版嵁搴擄紝浠ｇ爜鐪佺暐  
+          //鍒涘缓鏁版嵁搴撴棩蹇楄褰曞櫒瀵硅薄  
           Logger logger = new DatabaseLogger();   
-          //初始化数据库日志记录器，代码省略  
+          //鍒濆鍖栨暟鎹簱鏃ュ織璁板綍鍣紝浠ｇ爜鐪佺暐  
           return logger;  
   }     
 }  

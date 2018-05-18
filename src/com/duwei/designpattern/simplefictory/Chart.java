@@ -1,6 +1,6 @@
 package com.duwei.designpattern.simplefictory;
 
-//抽象图表接口：抽象产品类  
+//鎶借薄鍥捐〃鎺ュ彛锛氭娊璞′骇鍝佺被  
 interface Chart {
 	public void display();
 }

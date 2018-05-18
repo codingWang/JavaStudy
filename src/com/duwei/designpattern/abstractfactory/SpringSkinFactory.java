@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//SpringÆ¤·ô¹¤³§£º¾ßÌå¹¤³§  
+//Springçš®è‚¤å·¥åŽ‚ï¼šå…·ä½“å·¥åŽ‚  
 class SpringSkinFactory implements SkinFactory {  
   public Button createButton() {  
       return new SpringButton();  

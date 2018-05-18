@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//½çÃæÆ¤·ô¹¤³§½Ó¿Ú£º³éÏó¹¤³§  
+//ç•Œé¢çš®è‚¤å·¥å‚æ¥å£ï¼šæŠ½è±¡å·¥å‚  
 interface SkinFactory {  
   public Button createButton();  
   public TextField createTextField();  

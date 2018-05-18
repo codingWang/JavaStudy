@@ -1,12 +1,12 @@
 package com.duwei.designpattern.simplefictory;
 
-//饼状图类：具体产品类  
+//楗肩姸鍥剧被锛氬叿浣撲骇鍝佺被  
 class PieChart implements Chart {  
   public PieChart() {  
-      System.out.println("创建饼状图！");  
+      System.out.println("鍒涘缓楗肩姸鍥撅紒");  
   }  
     
   public void display() {  
-      System.out.println("显示饼状图！");  
+      System.out.println("鏄剧ず楗肩姸鍥撅紒");  
   }  
 }  

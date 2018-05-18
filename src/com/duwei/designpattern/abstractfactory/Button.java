@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//°´Å¥½Ó¿Ú£º³éÏó²úÆ·  
+//æŒ‰é’®æ¥å£ï¼šæŠ½è±¡äº§å“  
 interface Button {  
   public void display();  
 }  

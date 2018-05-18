@@ -50,8 +50,7 @@ public class FileSearch2 implements Callable<List<File>> {
 		for (File f : files) {
 			if (f.isDirectory()) {// 这是一个目录
 				Callable<List<File>> runnable = new FileSearch(f, filter);// 有返回值的任务
-				FutureTask<List<File>> task = new FutureTask<List<File>>(
-						runnable);
+				FutureTask<List<File>> task = new FutureTask<List<File>>(runnable);
 				results.add(task);
 				service.submit(task);
 			} else if (filter.accept(f.getParentFile(), f.getName())) {

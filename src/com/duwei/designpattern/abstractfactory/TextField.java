@@ -1,6 +1,6 @@
 package com.duwei.designpattern.abstractfactory;
 
-//文本框接口：抽象产品  
+//鏂囨湰妗嗘帴鍙ｏ細鎶借薄浜у搧  
 interface TextField {  
   public void display();  
 }  

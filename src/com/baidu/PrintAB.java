@@ -6,7 +6,7 @@ public class PrintAB {
 	}
 	
 	/**
-	 * Õâ¸ö½â·¨×Ô¼ºÏëµÄÓĞµãÈõÖÇÁË£¡
+	 * è¿™ä¸ªè§£æ³•è‡ªå·±æƒ³çš„æœ‰ç‚¹å¼±æ™ºäº†ï¼
 	 */
 //	public void printAB(){
 //		if(new PrintAB(){
@@ -22,7 +22,7 @@ public class PrintAB {
 //	}
 	
 	/**
-	 * ½è¼øµÄ½â·¨
+	 * å€Ÿé‰´çš„è§£æ³•
 	 */
 	public void printAB(){
 		if(System.out.append("a")==null){
