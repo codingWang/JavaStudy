@@ -1,6 +1,6 @@
 package com.duweri.interview.sort;
 
-public class BubbleSort extends BaseSortAlgorithms{
+public class BubbleSort extends BaseSortAlgorithms {
     /*
      * 冒泡排序
      * 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
