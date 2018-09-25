@@ -1,8 +1,8 @@
 package com.duwei.designpattern.adapter;
 
-//抽象成绩操作类：目标接口  
+//鎶借薄鎴愮哗鎿嶄綔绫伙細鐩爣鎺ュ彛  
 interface ScoreOperation {  
-  public int[] sort(int array[]); //成绩排序  
+  public int[] sort(int array[]); //鎴愮哗鎺掑簭  
   
-  public int search(int array[],int key); //成绩查找  
+  public int search(int array[],int key); //鎴愮哗鏌ユ壘  
 }  

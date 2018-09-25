@@ -1,6 +1,6 @@
 package com.duwei.designpattern.adapter;
 
-//¿ìËÙÅÅĞòÀà£ºÊÊÅäÕß  
+//å¿«é€Ÿæ’åºç±»ï¼šé€‚é…è€…  
 class QuickSort {
 	public int[] quickSort(int array[]) {
 		sort(array, 0, array.length - 1);

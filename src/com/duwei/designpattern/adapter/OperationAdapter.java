@@ -1,9 +1,9 @@
 package com.duwei.designpattern.adapter;
 
-//²Ù×÷ÊÊÅäÆ÷£ºÊÊÅäÆ÷  
+//æ“ä½œé€‚é…å™¨ï¼šé€‚é…å™¨  
 class OperationAdapter implements ScoreOperation {
-	private QuickSort sortObj; // ¶¨ÒåÊÊÅäÕßQuickSort¶ÔÏó
-	private BinarySearch searchObj; // ¶¨ÒåÊÊÅäÕßBinarySearch¶ÔÏó
+	private QuickSort sortObj; // å®šä¹‰é€‚é…è€…QuickSortå¯¹è±¡
+	private BinarySearch searchObj; // å®šä¹‰é€‚é…è€…BinarySearchå¯¹è±¡
 
 	public OperationAdapter() {
 		sortObj = new QuickSort();
@@ -11,10 +11,10 @@ class OperationAdapter implements ScoreOperation {
 	}
 
 	public int[] sort(int array[]) {
-		return sortObj.quickSort(array); // µ÷ÓÃÊÊÅäÕßÀàQuickSortµÄÅÅĞò·½·¨
+		return sortObj.quickSort(array); // è°ƒç”¨é€‚é…è€…ç±»QuickSortçš„æ’åºæ–¹æ³•
 	}
 
 	public int search(int array[], int key) {
-		return searchObj.binarySearch(array, key); // µ÷ÓÃÊÊÅäÕßÀàBinarySearchµÄ²éÕÒ·½·¨
+		return searchObj.binarySearch(array, key); // è°ƒç”¨é€‚é…è€…ç±»BinarySearchçš„æŸ¥æ‰¾æ–¹æ³•
 	}
 }

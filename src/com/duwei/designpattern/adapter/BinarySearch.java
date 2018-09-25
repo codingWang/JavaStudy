@@ -1,6 +1,6 @@
 package com.duwei.designpattern.adapter;
 
-//¶þ·Ö²éÕÒÀà£ºÊÊÅäÕß  
+//äºŒåˆ†æŸ¥æ‰¾ç±»ï¼šé€‚é…è€…  
 class BinarySearch {
 	public int binarySearch(int array[], int key) {
 		int low = 0;
@@ -13,9 +13,9 @@ class BinarySearch {
 			} else if (midVal > key) {
 				high = mid - 1;
 			} else {
-				return 1; // ÕÒµ½ÔªËØ·µ»Ø1
+				return 1; // æ‰¾åˆ°å…ƒç´ è¿”å›ž1
 			}
 		}
-		return -1; // Î´ÕÒµ½ÔªËØ·µ»Ø-1
+		return -1; // æœªæ‰¾åˆ°å…ƒç´ è¿”å›ž-1
 	}
 }

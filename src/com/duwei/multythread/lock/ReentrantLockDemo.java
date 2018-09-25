@@ -2,12 +2,7 @@ package com.duwei.multythread.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 /**
- * �������̶߳���i����++������Ϊ�˱�֤�̰߳�ȫ��
- * ʹ���� ReentrantLock�����÷��Ͽ��Կ�����
- * �� synchronized��ȣ� ReentrantLock����΢����һ�㡣
- * ��Ϊ������finally�н��н���������������� finally������
- * �п��ܴ�������쳣��û���ͷţ���synchronized����JVM���ͷ�����
- * @author ��ΰ
+ * @author ???
  *
  */
 public class ReentrantLockDemo implements Runnable{
@@ -18,7 +13,7 @@ public class ReentrantLockDemo implements Runnable{
 		for (int j = 0; j < 10000000; j++){
 			lock.lock();
 			try{
-				i++;
+				i++;//这不是原子操作
 			}
 			finally{
 				lock.unlock();

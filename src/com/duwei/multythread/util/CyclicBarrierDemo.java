@@ -17,6 +17,8 @@ public class CyclicBarrierDemo {
         CyclicBarrier barrier = new CyclicBarrier(N);
         for (int i = 0; i < N; i++)
             new Writer(barrier).start();
+
+        System.out.println("...............");
     }
 
     static class Writer extends Thread {
