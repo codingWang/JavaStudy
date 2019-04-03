@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- * 给定整形数组，组合出最小值
+ * 给定整形数组，组合数组元素给出最小值
  * @author 杜伟
  */
 

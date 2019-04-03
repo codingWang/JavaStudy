@@ -24,12 +24,6 @@ public class ProducerConsumerInJava {
     }
 }
 
-/**
- * Producer Thread will keep producing values for Consumer
- * to consumer. It will use wait() method when Queue is full
- * and use notify() method to send notification to Consumer
- * Thread.
- */
 class Producer extends Thread {
     private Queue<Integer> queue;
     private int maxSize;
@@ -62,13 +56,6 @@ class Producer extends Thread {
     }
 }
 
-/**
- * Consumer Thread will consumer values form shared queue.
- * It will also use wait() method to wait if queue is
- * empty. It will also use notify method to send
- * notification to producer thread after consuming values
- * from queue.
- */
 class Consumer extends Thread {
     private Queue<Integer> queue;
     private int maxSize;

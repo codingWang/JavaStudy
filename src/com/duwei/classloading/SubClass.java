@@ -3,7 +3,7 @@ package com.duwei.classloading;
 public class SubClass extends SuperClass {
 
 	static {
-		System.out.println("SubClass ³õÊ¼»¯ÁË");
+		System.out.println("SubClass åˆå§‹åŒ–äº†");
 	}
 
 }

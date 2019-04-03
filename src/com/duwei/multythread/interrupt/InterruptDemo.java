@@ -21,8 +21,7 @@ public class InterruptDemo {
     public static class TaskQueue {
         private static final int MAX_TASKS = 1000;
 
-        private BlockingQueue<Runnable> queue
-                = new LinkedBlockingQueue<Runnable>(MAX_TASKS);
+        private BlockingQueue<Runnable> queue = new LinkedBlockingQueue<Runnable>(MAX_TASKS);
 
         public void putTask(Runnable r) throws InterruptedException {
             queue.put(r);
@@ -35,6 +34,7 @@ public class InterruptDemo {
 
     /**
      * 002:在抛出异常之前进行清理操作,模拟匹配玩家游戏
+     * 捕获清理再抛出
      */
     public static class PlayerMatcher {
         private PlayerSource players;

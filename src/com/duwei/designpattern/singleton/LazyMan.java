@@ -1,7 +1,7 @@
 package com.duwei.designpattern.singleton;
 
 public class LazyMan {
-	private static LazyMan instance = null; // ясЁы╪сть
+	private static LazyMan instance = null; // Е╩╤Х©÷Е┼═Х╫╫
 
 	private LazyMan() {
 	}

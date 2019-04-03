@@ -24,6 +24,8 @@ public class ReadWriteLockDemo {
         }
     }
 
+
+
     static class Data {
         private int data;// 共享数据
         private ReadWriteLock rwl = new ReentrantReadWriteLock();

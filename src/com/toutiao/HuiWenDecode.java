@@ -3,8 +3,8 @@ package com.toutiao;
 import java.util.Scanner;
 
 /**
- * »ØÎÄ½âÂë
- * @author ¶ÅÎ°
+ * å›æ–‡è§£ç 
+ * @author æœä¼Ÿ
  */
 public class HuiWenDecode {
 
@@ -12,7 +12,7 @@ public class HuiWenDecode {
 		Scanner input = new Scanner(System.in);
 		String _string = input.nextLine();
 		int a = input.nextInt();
-		for (int i = 0; i < a; i++) {//Ö´ĞĞa´Î²Ù×÷£¬Ã¿´Î2¸öÊı×Ö
+		for (int i = 0; i < a; i++) {//æ‰§è¡Œaæ¬¡æ“ä½œï¼Œæ¯æ¬¡2ä¸ªæ•°å­—
 			int s1 = input.nextInt();
 			int s2 = input.nextInt();
 			_string = getString(_string, s1, s2);

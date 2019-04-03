@@ -14,7 +14,6 @@ public class Tets {
             }).start();
         }
 
-
         System.out.println("...........");
 
     }
