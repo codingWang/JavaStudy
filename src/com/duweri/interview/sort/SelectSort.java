@@ -15,7 +15,7 @@ public class SelectSort {
         int temp = 0; //中间变量
 
         for (int i = 0; i < size; i++) {
-            int k = i;   //待确定的位置
+            int k = i;   //待确定的位置,标记最小值的坐标
             //选择出应该在第i个位置的数
             for (int j = size - 1; j > i; j--) {
                 if (numbers[j] < numbers[k]) {
